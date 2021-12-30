@@ -1,0 +1,31 @@
+# Export for compatibility
+
+newmtl white
+illum 2
+Ka 0.4 0.4 0.4
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 60.0
+
+newmtl glassblutint
+illum 4
+Ka 0.4 0.4 0.4
+Kd 0.5551 0.8 0.773
+Ks 0.7969 0.9714 0.9223
+Ns 60.0
+sharpness 60.0
+d 0.67
+
+newmtl silver
+illum 2
+Ka 0.9551 0.9551 0.9551
+Kd 0.6163 0.6163 0.6163
+Ks 0.3 0.3 0.3
+Ns 60.0
+
+newmtl black
+illum 2
+Ka 0.0 0.0 0.0
+Kd 0.0020 0.0020 0.0020
+Ks 0.5184 0.5184 0.5184
+Ns 128.0

@@ -1,0 +1,15 @@
+# Export for compatibility
+
+newmtl grey
+illum 2
+Ka 0.5 0.5 0.5
+Kd 0.1837 0.1837 0.1837
+Ks 0.5 0.5 0.5
+Ns 65.89
+
+newmtl flgrey
+illum 1
+Ka 0.2163 0.2163 0.2163
+Kd 0.5 0.5 0.5
+Ks 0.0 0.0 0.0
+Ns 1.0
