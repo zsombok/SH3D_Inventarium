@@ -43,7 +43,7 @@ function UserPreferences() {
   /** @type {PatternsCatalog} */
   this.patternsCatalog = null;
   this.currency = null;
-  this.valueAddedTaxEnabled = false
+  this.valueAddedTaxEnabled = false;
   this.defaultValueAddedTaxPercentage = null;
   /** @type {LengthUnit} */
   this.unit = null;
