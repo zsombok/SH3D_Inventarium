@@ -55,7 +55,7 @@ FurnitureCatalogListPanel.prototype.createComponents = function (catalog, prefer
   // Filtering
   var filteringDiv = document.createElement("div");
   filteringDiv.id = "furniture-filter";
-  //this.container.insertBefore(filteringDiv, furnitureCatalogList);
+  this.container.insertBefore(filteringDiv, furnitureCatalogList);
 
   var categorySelector = document.createElement("select");
   var searchInput = document.createElement("input");
@@ -481,7 +481,7 @@ FurnitureCatalogListPanel.prototype.createCatalogItemTooltipText = function(piec
   // if (tipTextCreator != null) {
   //   tipText += "<br>" + tipTextCreator;
   // }
-  tipText += "<br/><img height='100px'/>";
+  tipText += "<br/><img height='128px'/>";
   tipText += "</center>";
   return tipText;
 } 

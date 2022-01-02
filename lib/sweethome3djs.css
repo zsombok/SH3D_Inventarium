@@ -436,7 +436,7 @@ label {
 }
 
 .furniture-tooltip {
-  background-color: rgba(128, 128, 128, 0.8);
+  background-color: rgba(240, 240, 240, 0.88);
   border: solid black 1px;
   color: white;
   font-family: Arial;
@@ -461,7 +461,7 @@ label {
 
 #furniture-search-field {
   left: 0;
-  background: url(search.gif) no-repeat scroll 0px 2px;
+  background: url(search.gif) no-repeat scroll 1px 1px;
   background-color: #FFFFFFAA;
   border-width: thin;
   border-radius: 5px;
