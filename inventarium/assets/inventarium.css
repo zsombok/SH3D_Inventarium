@@ -1,0 +1,207 @@
+.container {
+    background-image: url(../../common/background_clean.jpg);
+}
+.flex-wrap {
+	width: 100%;
+	height: 0px;
+}
+.central-right-quizz {
+    flex-wrap: wrap;
+    align-content: center;
+    padding-top: 50px;
+}
+.quiz-start-but {
+    margin-bottom: 50px;
+}
+.content-grid {
+    -ms-grid-columns: 0.41fr 1fr;
+    grid-template-columns: 0.41fr 1fr;
+}
+.content-text-wrapper {
+    padding-right: 250px;
+}
+.content-text {
+    font-size: 30px;
+}
+
+/* SUB PAGE */
+.content-image-wrapper.-heraldika .w-icon-slider-left,
+.content-image-wrapper.-heraldika .w-icon-slider-right {
+	top: auto;
+}
+.slider-img-desc {
+ 	font-family: 'Klavikach Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+ }
+ .bg_img {
+ 	width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+ }
+ .slider-inside img {
+    margin-bottom: 0px;
+    max-height: none;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.date_button {
+	position: relative;
+	display: flex;
+    justify-content: center;
+    width: 90px;
+    background-color: #dcd2b7;
+    color: #231f20;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Arial';
+    font-weight: bold;
+    font-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid #231f20;
+    -webkit-transition: all 500ms ease-out;
+	-moz-transition: all 500ms ease-out;
+	-ms-transition: all 500ms ease-out;
+	-o-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
+}
+.date_button::after {
+	content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 20px solid #231f20;
+    -webkit-transition: all 500ms ease-out;
+	-moz-transition: all 500ms ease-out;
+	-ms-transition: all 500ms ease-out;
+	-o-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
+}
+.date_button.-active {
+	background-color: #231f20;
+	color: #fff;
+}
+.date_button.-active::after {
+	content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    top: auto;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 20px solid #231f20;
+    border-top: none;
+}
+.inventarium-date-container {
+	display: flex;
+	justify-content: space-between;
+}
+.content-image-wrapper {
+	max-width: 520px;
+}
+
+/* EVSZAM PAGE */
+.content-text-wrapper b,
+.content-text-wrapper strong {
+	font-weight: 500;
+}
+.content-text-wrapper table {
+	width: fit-content !important;
+    height: auto!important;
+	border: none;
+	font-family: 'Klavikach Condensed', sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+}
+.content-text-wrapper table td {
+	border: none;
+	padding-right: 75px;
+	white-space: nowrap;
+}
+.content-text-slide {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	-ms-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+.content-text-slide.-block {
+	display: block;
+}
+.content-text-slide.-show {
+	visibility: visible;
+	opacity: 1;
+}
+.inventarium-slider-nav {
+	position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-image: url(alap_voros_cimke.png);
+    bottom: 34px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 128px;
+    height: 50px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.inventarium-slider-nav-right {
+	width: 19px;
+	height: 14px;
+	background-image: url(inventarium_prev.png);
+	background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.inventarium-slider-nav-left {
+	width: 19px;
+	height: 14px;
+	background-image: url(inventarium_next.png);
+	background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.content-image-wrapper.-inventarium .w-slider-arrow-right,
+.content-image-wrapper.-inventarium .w-slider-arrow-left {
+	display: none;
+}
+.inventarium-slider-nums {
+	color: #fff;
+    font-family: 'Imfellenglish', sans-serif;
+    padding: 6px 10px 0px;
+    font-size: 20px;
+    position: relative;
+    top: -8px;
+}
+.inventarium-slider-nums span {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -23px;
+}
