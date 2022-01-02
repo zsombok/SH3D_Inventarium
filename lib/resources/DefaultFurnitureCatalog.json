@@ -9,7 +9,7 @@
   "doorOrWindow#1": "false",
   "deformable#1": "false",
   "resizable#1": "false",
-  "category#1": "",
+  "category#1": "Bedroom",
   "creator#1": "ZsD",
   
   "name#2": "Table 2",
@@ -23,6 +23,6 @@
   "doorOrWindow#2": "false",
   "deformable#2": "false",
   "resizable#2": "false",
-  "category#2": "",
+  "category#2": "Bedroom",
   "creator#2": "ZsD"
 }
