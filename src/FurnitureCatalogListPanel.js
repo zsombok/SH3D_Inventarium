@@ -470,17 +470,17 @@ FurnitureCatalogListPanel.prototype.createCatalogItemTooltipText = function(piec
   }
 
   var tipText = "<center>";
-  tipText += "- <b>" + piece.getCategory().getName() + "</b> -<br>";
+  //tipText += "- <b>" + piece.getCategory().getName() + "</b> -<br>";
   tipText += "<b>" + piece.getName() + "</b>";
   if (tipTextDimensions != null) {
     tipText += "<br>" + tipTextDimensions;
   }
-  if (tipTextModelSize != null) {
-    tipText += "<br>" + tipTextModelSize;
-  }
-  if (tipTextCreator != null) {
-    tipText += "<br>" + tipTextCreator;
-  }
+  // if (tipTextModelSize != null) {
+  //   tipText += "<br>" + tipTextModelSize;
+  // }
+  // if (tipTextCreator != null) {
+  //   tipText += "<br>" + tipTextCreator;
+  // }
   tipText += "<br/><img height='100px'/>";
   tipText += "</center>";
   return tipText;
