@@ -26,7 +26,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="msapplication-tap-highlight" content="no">
 <title>Inventarium</title>
-<base href="..">
+<!-- <base href=".."> -->
 <script type="text/javascript" src="lib/big.min.js"></script>
 <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
 <script type="text/javascript" src="lib/jszip.min.js"></script>
@@ -1491,7 +1491,7 @@ var application = useServer
              }
           })
     : new SweetHome3DJSApplication();
-var homeName = useServer ? "HomeTest" : "lib/resources/models/test_room_01.sh3d";
+    var homeName = useServer ? "HomeTest" : "lib/resources/models/test_room_01.sh3d";
 
 // Read and display test file 
 // TODO Should be performed in HomeController.open
@@ -1500,6 +1500,7 @@ application.getHomeRecorder().readHome(homeName,
       homeLoaded: function(home) {
         home.setName(homeName);
         application.addHome(home);
+        console.log(application);
         
         if (!skipTests) {
           setTimeout(testHomeModifications, 1000);

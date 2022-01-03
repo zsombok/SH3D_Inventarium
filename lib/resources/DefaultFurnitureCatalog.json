@@ -19,7 +19,7 @@
   "depth#2": "91",
   "height#2": "78",
   "dropOnTopElevation#2": "78",
-  "movable#2": "false",
+  "movable#2": "true",
   "doorOrWindow#2": "false",
   "deformable#2": "false",
   "resizable#2": "false",

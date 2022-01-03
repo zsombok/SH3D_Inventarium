@@ -8,13 +8,15 @@ function createWindow () {
       nodeIntegration: true,
       contextIsolation: false,
       nativeWindowOpen: true
-    }
+    },
+    // autoHideMenuBar: true,
   });
 
-  mainWindow.setFullScreen(false);
-
+  mainWindow.setPosition(-1920,1085);
+  mainWindow.setFullScreen(true);
+  mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile('index.html');
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
