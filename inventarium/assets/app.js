@@ -33,13 +33,13 @@ class Application {
       document.querySelector('#content').innerHTML = html;
     } else {
       document.querySelector('.container').classList.remove('container-clean');
-      if (name.match(/^[a-z0-9]+$/)) {
+      if (name.match(/^[a-zA-Z0-9]+$/)) {
         this.setHeader(this.language);
         let html = fs.readFileSync(__dirname + '/contents/' + this.language + '/' + name + '.html').toString();
         document.querySelector('#content').innerHTML = html;
       }
     }
-    msysInitSzalagok();
+    // msysInitSzalagok();
     msysInitInventarium();
   }
 
