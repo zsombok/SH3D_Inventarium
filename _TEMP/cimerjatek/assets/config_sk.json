@@ -1,0 +1,1057 @@
+{
+  "steps": {
+    "pajzsfroma": {
+      "type": "element",
+      "title": "Tvar \u0161t\u00edtu",
+      "options": {
+        "1": {
+          "id": 1,
+          "src": "assets\/forma_01.svg",
+          "width": null,
+          "height": 250,
+          "pos": [
+            "center",
+            130,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 0,
+          "colors": 2,
+          "message": "okr\u00fahly \u0161t\u00edt",
+          "pic_positions": [
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                210,
+                250,
+                "right",
+                "top"
+              ],
+              "pic_pos": 0
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                340,
+                250,
+                "left",
+                "top"
+              ],
+              "mirror": "x",
+              "pic_pos": 1
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                235,
+                260,
+                "center",
+                "center"
+              ],
+              "pic_pos": 2
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                325,
+                240,
+                "center",
+                "center"
+              ],
+              "pic_pos": 3
+            }
+          ]
+        },
+        "2": {
+          "id": 2,
+          "src": "assets\/forma_02.svg",
+          "width": null,
+          "height": 250,
+          "pos": [
+            "center",
+            "center",
+            "center",
+            "center"
+          ],
+          "override": true,
+          "zindex": 0,
+          "colors": 2,
+          "message": "gotick\u00fd \u0161t\u00edt",
+          "pic_positions": [
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                210,
+                250,
+                "right",
+                "top"
+              ],
+              "pic_pos": 0
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                340,
+                250,
+                "left",
+                "top"
+              ],
+              "mirror": "x",
+              "pic_pos": 1
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                "center",
+                310,
+                "center",
+                "center"
+              ],
+              "pic_pos": 2
+            }
+          ]
+        },
+        "3": {
+          "id": 3,
+          "src": "assets\/forma_03.svg",
+          "width": null,
+          "height": 250,
+          "pos": [
+            "center",
+            "center",
+            "center",
+            "center"
+          ],
+          "override": true,
+          "zindex": 0,
+          "colors": 2,
+          "message": "franc\u00fazsky \u0161t\u00edt",
+          "pic_positions": [
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                210,
+                250,
+                "right",
+                "top"
+              ],
+              "pic_pos": 0
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                340,
+                250,
+                "left",
+                "top"
+              ],
+              "mirror": "x",
+              "pic_pos": 1
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                240,
+                220,
+                "center",
+                "center"
+              ],
+              "pic_pos": 2
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                305,
+                320,
+                "center",
+                "center"
+              ],
+              "pic_pos": 3
+            }
+          ]
+        },
+        "4": {
+          "id": 4,
+          "src": "assets\/forma_04.svg",
+          "width": null,
+          "height": 250,
+          "pos": [
+            "center",
+            "center",
+            "center",
+            "center"
+          ],
+          "override": true,
+          "zindex": 0,
+          "colors": 2,
+          "message": "neskorogotick\u00fd \u0161t\u00edt",
+          "pic_positions": [
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                210,
+                250,
+                "right",
+                "top"
+              ],
+              "pic_pos": 0
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                340,
+                250,
+                "left",
+                "top"
+              ],
+              "mirror": "x",
+              "pic_pos": 1
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                "center",
+                200,
+                "center",
+                "center"
+              ],
+              "pic_pos": 2
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                "center",
+                330,
+                "center",
+                "center"
+              ],
+              "pic_pos": 3
+            }
+          ]
+        },
+        "5": {
+          "id": 5,
+          "src": "assets\/forma_05.svg",
+          "width": null,
+          "height": 250,
+          "pos": [
+            "center",
+            "center",
+            "center",
+            "center"
+          ],
+          "override": true,
+          "zindex": 0,
+          "colors": 1,
+          "message": "ov\u00e1lny \u0161t\u00edt",
+          "pic_positions": [
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                210,
+                250,
+                "right",
+                "top"
+              ],
+              "pic_pos": 0
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                340,
+                250,
+                "left",
+                "top"
+              ],
+              "mirror": "x",
+              "pic_pos": 1
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 75,
+              "maxHeight": 75,
+              "pos": [
+                "center",
+                "center",
+                "center",
+                "center"
+              ],
+              "pic_pos": 2
+            }
+          ]
+        },
+        "6": {
+          "id": 6,
+          "src": "assets\/forma_06.svg",
+          "width": null,
+          "height": 250,
+          "pos": [
+            "center",
+            "center",
+            "center",
+            "center"
+          ],
+          "override": true,
+          "zindex": 0,
+          "colors": 2,
+          "message": "renesan\u010dn\u00fd \u0161t\u00edt s p\u00e4tou ukon\u010denou  do \u0161pica",
+          "pic_positions": [
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                210,
+                250,
+                "right",
+                "top"
+              ],
+              "pic_pos": 0
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                340,
+                250,
+                "left",
+                "top"
+              ],
+              "mirror": "x",
+              "pic_pos": 1
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 50,
+              "maxHeight": 50,
+              "pos": [
+                240,
+                315,
+                "center",
+                "center"
+              ],
+              "pic_pos": 2
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 50,
+              "maxHeight": 50,
+              "pos": [
+                320,
+                215,
+                "center",
+                "center"
+              ],
+              "pic_pos": 3
+            }
+          ]
+        },
+        "7": {
+          "id": 7,
+          "src": "assets\/forma_07.svg",
+          "width": null,
+          "height": 250,
+          "pos": [
+            "center",
+            "center",
+            "center",
+            "center"
+          ],
+          "override": true,
+          "zindex": 0,
+          "colors": 2,
+          "message": "renesan\u010dn\u00fd \u0161t\u00edt",
+          "pic_positions": [
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                210,
+                250,
+                "right",
+                "top"
+              ],
+              "pic_pos": 0
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 130,
+              "maxHeight": 175,
+              "pos": [
+                340,
+                250,
+                "left",
+                "top"
+              ],
+              "mirror": "x",
+              "pic_pos": 1
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 65,
+              "maxHeight": 65,
+              "pos": [
+                "center",
+                200,
+                "center",
+                "center"
+              ],
+              "pic_pos": 2
+            },
+            {
+              "width": null,
+              "height": null,
+              "override": true,
+              "zindex": 5,
+              "maxWidth": 50,
+              "maxHeight": 50,
+              "pos": [
+                "center",
+                340,
+                "center",
+                "center"
+              ],
+              "pic_pos": 3
+            }
+          ]
+        }
+      }
+    },
+    "maz": {
+      "type": "color",
+      "title": "Tinkt\u00fary",
+      "options": {
+        "1": {
+          "id": 1,
+          "color": "#ffd100",
+          "message": "ZLAT\u00c1<br>\u00facta, moc, vernos\u0165 kr\u00e1\u013eovi"
+        },
+        "2": {
+          "id": 2,
+          "color": "#e5e5e5",
+          "message": "STRIEBORN\u00c1<br>\u010distota, viera"
+        },
+        "3": {
+          "id": 3,
+          "color": "#db281e",
+          "message": "\u010cERVEN\u00c1<br>stato\u010dnos\u0165, obeta krvi"
+        },
+        "4": {
+          "id": 4,
+          "color": "#0038a5",
+          "message": "MODR\u00c1<br>\u00faprimnos\u0165, milostivos\u0165"
+        },
+        "5": {
+          "id": 5,
+          "color": "#00993d",
+          "message": "ZELEN\u00c1<br>plodnos\u0165, mlados\u0165"
+        },
+        "6": {
+          "id": 6,
+          "color": "#000000",
+          "message": "\u010cIERNA<br>boles\u0165, kaj\u00facnos\u0165"
+        },
+        "7": {
+          "id": 7,
+          "color": "#b50a9b",
+          "message": "PURPUROV\u00c1<br>d\u00f4stojnos\u0165"
+        }
+      }
+    },
+    "takaro": {
+      "type": "element",
+      "title": "Prikr\u00fdvadlo",
+      "options": {
+        "1": {
+          "id": 1,
+          "src": "assets\/takaro_01.svg",
+          "width": 375,
+          "height": null,
+          "pos": [
+            "center",
+            100,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 1
+        },
+        "2": {
+          "id": 2,
+          "src": "assets\/takaro_02.svg",
+          "width": 375,
+          "height": null,
+          "pos": [
+            "center",
+            55,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 1
+        },
+        "3": {
+          "id": 3,
+          "src": "assets\/takaro_03.svg",
+          "width": 375,
+          "height": null,
+          "pos": [
+            "center",
+            55,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 1
+        },
+        "4": {
+          "id": 4,
+          "src": "assets\/takaro_04.svg",
+          "width": 375,
+          "height": null,
+          "pos": [
+            "center",
+            55,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 1
+        },
+        "5": {
+          "id": 5,
+          "src": "assets\/takaro_05.svg",
+          "width": 375,
+          "height": null,
+          "pos": [
+            "center",
+            55,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 1
+        }
+      }
+    },
+    "sisakdisz": {
+      "type": "element",
+      "title": "Klenot",
+      "options": {
+        "1": {
+          "id": 1,
+          "src": "assets\/sisakdisz_01.svg",
+          "width": null,
+          "height": 65,
+          "pos": [
+            "center",
+            90,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 2,
+          "message": "knie\u017eacia koruna"
+        },
+        "2": {
+          "id": 2,
+          "src": "assets\/sisakdisz_02.svg",
+          "width": null,
+          "height": 65,
+          "pos": [
+            "center",
+            90,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 2,
+          "message": "gr\u00f3fska koruna"
+        },
+        "3": {
+          "id": 3,
+          "src": "assets\/sisakdisz_03.svg",
+          "width": null,
+          "height": 65,
+          "pos": [
+            "center",
+            90,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 2,
+          "message": "bar\u00f3nska koruna"
+        },
+        "4": {
+          "id": 4,
+          "src": "assets\/sisakdisz_04.svg",
+          "width": null,
+          "height": 65,
+          "pos": [
+            "center",
+            90,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 2,
+          "message": "\u0161\u013eachtick\u00e1 koruna"
+        },
+        "5": {
+          "id": 5,
+          "src": "assets\/sisakdisz_05.svg",
+          "width": null,
+          "height": 100,
+          "pos": [
+            "center",
+            55,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 2,
+          "message": "rytierska prilba"
+        }
+      }
+    },
+    "cimerkepek": {
+      "type": "element",
+      "title": "Obecn\u00e9 figury",
+      "options": {
+        "1": {
+          "id": 1,
+          "src": "assets\/cimerkep_01.svg",
+          "side": false,
+          "message": "RUKA DR\u017dIACA ME\u010c<br>o \u0161\u013eachtick\u00fd titul sa zasl\u00fa\u017eil v boji"
+        },
+        "2": {
+          "id": 2,
+          "src": "assets\/cimerkep_02.svg",
+          "side": false,
+          "message": "HVIEZDA<br>ve\u010dnos\u0165, zn\u00e1soben\u00e1 m\u00f4\u017ee by\u0165 symbolom prakticky v\u0161etk\u00e9ho"
+        },
+        "3": {
+          "id": 3,
+          "src": "assets\/cimerkep_03.svg",
+          "side": false,
+          "message": "SLNKO<br>svetlo, teplo, \u017eiariv\u00fd, dobrodinec"
+        },
+        "4": {
+          "id": 4,
+          "src": "assets\/cimerkep_04.svg",
+          "side": false,
+          "message": "VE\u017dA<br>vz\u0165ahuje sa na konkr\u00e9tny hrad, pevnos\u0165"
+        },
+        "5": {
+          "id": 5,
+          "src": "assets\/cimerkep_05.svg",
+          "side": true,
+          "message": "LEV<br>panovn\u00edk, mocn\u00fd obhajca z\u00e1kona, odvaha, sila"
+        },
+        "6": {
+          "id": 6,
+          "src": "assets\/cimerkep_06.svg",
+          "side": true,
+          "message": "GRIF<br>vzkriesenie"
+        },
+        "7": {
+          "id": 7,
+          "src": "assets\/cimerkep_07.svg",
+          "side": true,
+          "message": "\u017dERIAV OBY\u010cAJN\u00dd<br>bdelos\u0165, lojalita"
+        },
+        "8": {
+          "id": 8,
+          "src": "assets\/cimerkep_08.svg",
+          "side": true,
+          "message": "F\u00c9NIX<br>t\u00fa\u017eba po Bohu"
+        },
+        "9": {
+          "id": 9,
+          "src": "assets\/cimerkep_09.svg",
+          "side": false,
+          "message": "JA\u0160TERICA<br>prin\u00e1\u0161a \u0161\u0165astia"
+        },
+        "10": {
+          "id": 10,
+          "src": "assets\/cimerkep_10.svg",
+          "side": false,
+          "message": "PRSTE\u0147<br>m\u00fadros\u0165, spoznanie"
+        },
+        "11": {
+          "id": 11,
+          "src": "assets\/cimerkep_11.svg",
+          "side": false,
+          "message": "VT\u00c1K DR\u017dIACI PRSTE\u0147<br>cesta alebo str\u00e1\u017eca nie\u010doho "
+        },
+        "12": {
+          "id": 12,
+          "src": "assets\/cimerkep_12.svg",
+          "side": false,
+          "message": "HARFA<br>hudobn\u00e9 z\u00e1sluhy "
+        },
+        "13": {
+          "id": 13,
+          "src": "assets\/cimerkep_13.svg",
+          "side": false,
+          "message": "SKALA<br>vytrvalos\u0165"
+        },
+        "14": {
+          "id": 14,
+          "src": "assets\/cimerkep_14.svg",
+          "side": false,
+          "message": "K\u013d\u00da\u010c<br>vyslobodenie, vedomos\u0165 "
+        },
+        "15": {
+          "id": 15,
+          "src": "assets\/cimerkep_15.svg",
+          "side": true,
+          "message": "BARAN<br>nevinnos\u0165, veriaci"
+        },
+        "16": {
+          "id": 16,
+          "src": "assets\/cimerkep_16.svg",
+          "side": true,
+          "message": "PES<br>ochranca"
+        },
+        "17": {
+          "id": 17,
+          "src": "assets\/cimerkep_17.svg",
+          "side": false,
+          "message": "LUTNA<br>b\u00e1snictvo"
+        },
+        "18": {
+          "id": 18,
+          "src": "assets\/cimerkep_18.svg",
+          "side": false,
+          "message": "ME\u010c<br>chrabros\u0165"
+        },
+        "19": {
+          "id": 19,
+          "src": "assets\/cimerkep_19.svg",
+          "side": true,
+          "message": "MEDVE\u010e<br>moc, ochra\u0148uj\u00faca sila "
+        },
+        "20": {
+          "id": 20,
+          "src": "assets\/cimerkep_20.svg",
+          "side": false,
+          "message": "V\u010cELA<br>organizovanos\u0165, poriadok, usilovnos\u0165"
+        },
+        "21": {
+          "id": 21,
+          "src": "assets\/cimerkep_21.svg",
+          "side": false,
+          "message": "OLEJ, OLIVOVN\u00cdK<br>milos\u0165"
+        },
+        "22": {
+          "id": 22,
+          "src": "assets\/cimerkep_22.svg",
+          "side": true,
+          "message": "ST\u0139P<br>podpora nie\u010doho"
+        },
+        "23": {
+          "id": 23,
+          "src": "assets\/cimerkep_23.svg",
+          "side": false,
+          "message": "RU\u017dA<br>\u00faplnos\u0165, srdce Krista"
+        },
+        "24": {
+          "id": 24,
+          "src": "assets\/cimerkep_24.svg",
+          "side": true,
+          "message": "DRAK<br>sila a moc"
+        },
+        "25": {
+          "id": 25,
+          "src": "assets\/cimerkep_25.svg",
+          "side": true,
+          "message": "OROL<br>v\u00ed\u0165azstvo a snaha o moc"
+        },
+        "26": {
+          "id": 26,
+          "src": "assets\/cimerkep_26.svg",
+          "side": true,
+          "message": "P\u0160TROS<br>podvodn\u00edk"
+        },
+        "27": {
+          "id": 27,
+          "src": "assets\/cimerkep_27.svg",
+          "side": true,
+          "message": "K\u00d4\u0147 S PODKOVOU V \u00daSTACH<br>kov\u00e1\u010d"
+        },
+        "28": {
+          "id": 28,
+          "src": "assets\/cimerkep_28.svg",
+          "side": false,
+          "message": "HAD<br>dobr\u00fd, str\u00e1\u017eca"
+        },
+        "29": {
+          "id": 29,
+          "src": "assets\/cimerkep_29.svg",
+          "side": false,
+          "message": "DUB<br>stato\u010dnos\u0165, kamar\u00e1tstvo "
+        },
+        "30": {
+          "id": 30,
+          "src": "assets\/cimerkep_30.svg",
+          "side": false,
+          "message": "SLNKO A POLMESIAC<br>Sikul"
+        },
+        "31": {
+          "id": 31,
+          "src": "assets\/cimerkep_31.svg",
+          "side": true,
+          "message": "ZELEN\u00c1 VETVI\u010cKA<br>potomok"
+        },
+        "32": {
+          "id": 32,
+          "src": "assets\/cimerkep_32.svg",
+          "side": false,
+          "message": "JABLKO<br>mlados\u0165, plodnos\u0165\/hriech "
+        }
+      }
+    },
+    "motto": {
+      "type": "element",
+      "title": "Motto",
+      "options": {
+        "1": {
+          "id": 1,
+          "src": "assets\/motto_01.svg",
+          "width": 350,
+          "height": null,
+          "pos": [
+            "center",
+            420,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 6,
+          "text": {
+            "pos": 415,
+            "fontsize": 18,
+            "maxWidth": 195
+          }
+        },
+        "2": {
+          "id": 2,
+          "src": "assets\/motto_02.svg",
+          "width": 350,
+          "height": null,
+          "pos": [
+            "center",
+            440,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 6,
+          "text": {
+            "pos": 450,
+            "fontsize": 18,
+            "maxWidth": 240
+          }
+        },
+        "3": {
+          "id": 3,
+          "src": "assets\/motto_03.svg",
+          "width": 350,
+          "height": null,
+          "pos": [
+            "center",
+            420,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 6,
+          "text": {
+            "pos": 418,
+            "fontsize": 18,
+            "maxWidth": 210
+          }
+        },
+        "4": {
+          "id": 4,
+          "src": "assets\/motto_04.svg",
+          "width": 350,
+          "height": null,
+          "pos": [
+            "center",
+            440,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 6,
+          "text": {
+            "pos": 467,
+            "fontsize": 18,
+            "maxWidth": 195
+          }
+        },
+        "5": {
+          "id": 5,
+          "src": "assets\/motto_05.svg",
+          "width": 350,
+          "height": null,
+          "pos": [
+            "center",
+            440,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 6,
+          "text": {
+            "pos": 473,
+            "fontsize": 18,
+            "maxWidth": 180
+          }
+        },
+        "6": {
+          "id": 6,
+          "src": "assets\/motto_06.svg",
+          "width": 350,
+          "height": null,
+          "pos": [
+            "center",
+            440,
+            "center",
+            "top"
+          ],
+          "override": true,
+          "zindex": 6,
+          "text": {
+            "pos": 443,
+            "fontsize": 18,
+            "maxWidth": 170
+          }
+        }
+      }
+    }
+  },
+  "texts": {
+    "keszvagyok": "Hotov\u00e9",
+    "elkuldom": "Odosla\u0165",
+    "email_invalid": "Neplatn\u00e1 emailov\u00e1 adresa",
+    "email_nomail": "Nezadali ste e-mailov\u00fa adresu",
+    "email_success": "E-mail bol \u00faspe\u0161ne odoslan\u00fd",
+    "email_failture": "Nepodarilo sa odosla\u0165 e-mail"
+  }
+}
