@@ -12,11 +12,11 @@ function createWindow () {
     // autoHideMenuBar: true,
   });
 
-  mainWindow.setPosition(-1920,1085);
+  mainWindow.setPosition(-1000,1000);
   mainWindow.setFullScreen(true);
   mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile('index.html');
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {

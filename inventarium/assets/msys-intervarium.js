@@ -80,6 +80,10 @@ function msysInitInventarium() {
 				'slider_events': ['slider-event', '.w-slider', 'slider_events'],
 				'next': ['click', '.inventarium-slider-nav-right', 'next'],
 				'prev': ['click', '.inventarium-slider-nav-left', 'prev'],
+				'change_motto': ['keyboardChange', '.motto-field', 'change_motto'],
+				'finish': ['click', '.finish_button.finished.-active', 'finish'],
+				'send_image': ['click', '.finish_button.sendmail.-active', 'send_image'],
+				'restart': ['click', '.heraldika-restart', 'restart'],
 			},
 
 			init: function () {

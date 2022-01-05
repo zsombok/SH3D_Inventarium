@@ -41,6 +41,65 @@ class Application {
     }
     // msysInitSzalagok();
     msysInitInventarium();
+
+    let inv = document.getElementById("inventarium");
+    let ifr = document.getElementById("gameFrame")?.contentWindow;
+    window.addEventListener("click", e => {
+      ifr?.postMessage("start");
+    }
+    );
+
+    window.addEventListener("message", e => {
+      console.log("incoming message");
+      console.log(e);
+    })
   }
 
+  sendMail(to, attachment) {
+    this.closeKbd();
+
+    const msg = {
+      to: to,
+      from: 'info@littlebit.hu',
+      //TODO: tárgyat cserélni
+      subject: { 'sk': 'Erb Rodiny - Borsi', 'hu': 'Címer - Borsi', 'en': 'Coat Of Arms - Borsi' }[this.language],
+      html: '[attachment]',
+      attachments: [
+        {
+          filename: 'attachment.png',
+          type: 'image/png',
+          content: attachment,
+          disposition: 'attachment'
+        }
+      ]
+    }
+    mail.send(msg);
+  }
+
+  closeKbd() {
+    for (let el of ['.email-field', '.motto-field']) {
+      try {
+        let kbd = $(el).getkeyboard();
+        kbd.options.alwaysOpen = false;
+        kbd.close();
+      } catch { }
+    }
+    try {
+      let kbds = $('.ui-keyboard');
+      for (let i = 0; i < kbds.length; i++) {
+        try {
+          let kbd = $(kbds[i]).getkeyboard();
+          kbd.options.alwaysOpen = false;
+          kbd.close();
+        } catch (e) {
+          console.log(e);
+          console.log('Closing keyboard nr. ' + i + ' failed');
+        }
+      }
+    } catch { }
+
+    try {
+      $('.email-field-container').removeClass('-show');
+    } catch { }
+  }
 }
