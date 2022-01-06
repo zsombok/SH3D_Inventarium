@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $(window).on('click', () => {
     clearTimeout(reloader);
-    reloader = setTimeout(() => window.location.reload(), 1000 * 60 * 5);
+    reloader = setTimeout(() => window.location.reload(), 1000 * 60 * 10);
   });
 });

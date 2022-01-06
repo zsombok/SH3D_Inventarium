@@ -2,6 +2,7 @@ var msysIntervarium;
 var loaded = false;
 
 function msysInitInventarium() {
+	
 	(function ($) {
 		msysIntervarium = {
 
@@ -70,7 +71,8 @@ function msysInitInventarium() {
 				if (typeof model.ready === 'function') {
 					model.ready();
 				}
-			},
+			}
+
 
 		};
 
@@ -80,7 +82,6 @@ function msysInitInventarium() {
 				'slider_events': ['slider-event', '.w-slider', 'slider_events'],
 				'next': ['click', '.inventarium-slider-nav-right', 'next'],
 				'prev': ['click', '.inventarium-slider-nav-left', 'prev'],
-				'change_motto': ['keyboardChange', '.motto-field', 'change_motto'],
 				'finish': ['click', '.finish_button.finished.-active', 'finish'],
 				'send_image': ['click', '.finish_button.sendmail.-active', 'send_image'],
 				'restart': ['click', '.heraldika-restart', 'restart'],
@@ -143,6 +144,70 @@ function msysInitInventarium() {
 				var $prev = $container.find('.w-slider-arrow-left');
 				$prev.trigger('click');
 			},
+
+			init_keyboard_fields: function () {
+				this.language = app.language; //$('.header-lang').attr('data-lang');
+
+				$.keyboard.keyaction.dotcom = function (base) {
+					base.insertText('.com');
+				};
+
+				var layouts = {
+					'hu': {
+						'normal': ['0 1 2 3 4 5 6 7 8 9 ö ü ó {bksp}', 'q w e r t z u i o p ő ú', 'a s d f g h j k l é á ű', 'í y x c v b n m , . - _ @ {dotcom}', '{shift} {space} {shift}'],
+						'shift': ['! ? # $ % & = * + - ö ü ó {bksp}', 'Q W E R T Z U I O P Ő Ú', 'A S D F G H J K L É Á Ű', 'Í Y X C V B N M / \' ( ) | ~', '{shift} {space} {shift}']
+					},
+					'en': {
+						'normal': ['1 2 3 4 5 6 7 8 9 0 {bksp}', 'q w e r t y u i o p', 'a s d f g h j k l', 'z x c v b n m , . - _ @ {dotcom}', '{shift} {space} {shift}'],
+						'shift': ['! ? # $ % & = * + - {bksp}', 'Q W E R T Y U I O P', 'A S D F G H J K L', 'Z X C V B N M / \' ( ) | ~', '{shift} {space} {shift}']
+					},
+					'sk': {
+						'normal': ['! ? ľ š č ť ž ý á í é {bksp}', 'q w e r t z u i o p ú ä', 'a s d f g h j k l ň', 'y x c v b n m , . - _ @ {dotcom}', '{shift} {space} {shift}'],
+						'shift': ['; 1 2 3 4 5 6 7 8 9 0 {bksp}', 'Q W E R T Y U I O P ( )', 'A S D F G H J K L !', 'Y X C V B N M / \' { } | ~', '{shift} {space} {shift}']
+					}
+				}
+
+				var args = {
+					language: this.language,
+					rtl: false,
+					usePreview: false,
+					alwaysOpen: false,
+					autoAccept: true,
+					layout: 'custom',
+					display: {
+						'bksp': '\u2190',
+						'shift': '\u21e7',
+						'dotcom': '.com'
+					},
+					customLayout: layouts[this.language],
+					visible: function (e, keyboard, el) {
+						$('.ui-keyboard').addClass('-show');
+					},
+				};
+
+				this.$text_field.keyboard(args);
+				this.$email_field.keyboard(args);
+			},
+
+			init_finish_buttons: function () {
+				var $finish_buttons = $(
+					'<div class="finish_buttons -disabled">' +
+					'<div class="finish_button finished">' + this.config.texts.keszvagyok + ' <span class="circle"></span></div>' +
+					'<div class="finish_button sendmail">' + this.config.texts.elkuldom + ' <span class="circle"></span></div>' +
+					'</div>'
+				);
+
+				var $email_field = $(
+					'<div class="email-field-container">' +
+					'<input type="text" class="email-field" />' +
+					'</div>'
+				);
+
+				this.$container.append($finish_buttons);
+				this.$container.append($email_field);
+				this.$email_field = $email_field.find('input');
+			},
+
 
 		});
 

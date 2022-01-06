@@ -1,4 +1,8 @@
 const fs = require('fs');
+const mail = require('@sendgrid/mail');
+
+// temp key for Borsi
+mail.setApiKey('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');
 
 class Application {
 
@@ -27,6 +31,8 @@ class Application {
   }
 
   setPage(name) {
+    this.closeKbd();
+
     if (name == 'main') {
       this.setHeader('cc');
       let html = fs.readFileSync(__dirname + '/contents/' + this.language + '/' + name + '.html').toString();
@@ -39,20 +45,34 @@ class Application {
         document.querySelector('#content').innerHTML = html;
       }
     }
-    // msysInitSzalagok();
+
     msysInitInventarium();
 
-    let inv = document.getElementById("inventarium");
+    
     let ifr = document.getElementById("gameFrame")?.contentWindow;
     window.addEventListener("click", e => {
       ifr?.postMessage("start");
     }
     );
 
+    let invList = [];
     window.addEventListener("message", e => {
-      console.log("incoming message");
-      console.log(e);
+      const inv = document.getElementById("inventarium");
+      console.log(e.data);
+      invList = JSON.parse(e.data);
+      inv.innerHTML = "";
+      generateInvListDOM();
     })
+
+    const generateInvListDOM = function (){
+      if (invList.length === 0) return;
+      const inv = document.getElementById("inventarium");
+      invList.forEach(el => {
+        const element = document.createElement("div");
+        element.innerText = el;
+        inv.append(element);
+      });
+    }
   }
 
   sendMail(to, attachment) {

@@ -1530,19 +1530,21 @@
       });
 
     window.addEventListener("message", e => {
-      console.log(application.homes[0].furniture);
-      parent.postMessage(JSON.stringify(application.homes[0].furniture), "*")
+      parent.postMessage(JSON.stringify(createList(application.homes[0].furniture)), "*")
     }
     );
 
 
     function createList(array) {
-
-      array.forEach(element => {
-        if (element.doorOrWindow === false) {
-          console.log(element.name + " - " + element.description);
-        }
-      });
+      let furnitureArray = [];
+      let counter = 0;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i].doorOrWindow === true) continue;
+        const elementName = array[i].name;
+        const elementDesc = array[i].description;
+        furnitureArray[counter++] = elementName + " - " + elementDesc;
+      }
+      return furnitureArray;
     };
   </script>
 
