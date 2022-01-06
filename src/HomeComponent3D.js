@@ -411,7 +411,7 @@ HomeComponent3D.prototype.addCameraListeners = function() {
 HomeComponent3D.prototype.updateView = function(camera) {
   var fieldOfView = camera.getFieldOfView();
   if (fieldOfView === 0) {
-    fieldOfView = Math.PI * 63 / 180;
+    fieldOfView = Math.PI * 90 / 180;
   }
   this.canvas3D.setFieldOfView(fieldOfView);
   var frontClipDistance = 2.5;
