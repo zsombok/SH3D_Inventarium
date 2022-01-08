@@ -46,6 +46,10 @@ class Application {
       }
     }
 
+    if (name == 'gameCastle') {
+      let json = fs.readFileSync(`${__dirname}/assets/config_${this.language}.json`);
+      document.querySelector('#inventarium-config').innerHTML = json;
+    }
     msysInitInventarium();
 
     
@@ -57,16 +61,23 @@ class Application {
 
     let invList = [];
     window.addEventListener("message", e => {
-      const inv = document.getElementById("inventarium");
-      console.log(e.data);
+      const inv = document.getElementById("inventariumList");
+      console.log(inv);
       invList = JSON.parse(e.data);
       inv.innerHTML = "";
       generateInvListDOM();
+
+      // let home3DView = ifr.document.querySelector("#home-3D-view");
+      // if (home3DView) {
+      
+      // var image = home3DView.toDataURL("image/png").replace("image/png", "image/octet-stream");
+      // window.location.href = image;
+      // }
     })
 
     const generateInvListDOM = function (){
       if (invList.length === 0) return;
-      const inv = document.getElementById("inventarium");
+      const inv = document.getElementById("inventariumList");
       invList.forEach(el => {
         const element = document.createElement("div");
         element.innerText = el;
@@ -81,8 +92,7 @@ class Application {
     const msg = {
       to: to,
       from: 'info@littlebit.hu',
-      //TODO: tárgyat cserélni
-      subject: { 'sk': 'Erb Rodiny - Borsi', 'hu': 'Címer - Borsi', 'en': 'Coat Of Arms - Borsi' }[this.language],
+      subject: { 'sk': 'Inventár - Borsi', 'hu': 'Inventáriumok - Borsi', 'en': 'Inventories - Borsi' }[this.language],
       html: '[attachment]',
       attachments: [
         {

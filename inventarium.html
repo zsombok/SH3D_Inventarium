@@ -1506,16 +1506,20 @@
           }
         })
       : new SweetHome3DJSApplication();
-    var homeName = useServer ? "HomeTest" : "lib/resources/models/test_room_01.sh3d";
 
-    // Read and display test file 
-    // TODO Should be performed in HomeController.open
-    application.getHomeRecorder().readHome(homeName,
+      Locale.setDefault("en");
+
+      var homeName = useServer ? "HomeTest" : "lib/resources/models/test_room_01.sh3d";
+      
+      // Read and display test file 
+      // TODO Should be performed in HomeController.open
+      application.getHomeRecorder().readHome(homeName,
       {
         homeLoaded: function (home) {
           home.setName(homeName);
           application.addHome(home);
-          // console.log(application);
+          // application.preferences.setLanguage("hu");
+          console.log(application);
 
           if (!skipTests) {
             setTimeout(testHomeModifications, 1000);

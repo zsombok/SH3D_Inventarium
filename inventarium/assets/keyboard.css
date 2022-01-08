@@ -1,0 +1,61 @@
+.ui-keyboard {
+	position: fixed;
+	bottom: 0px !important;
+	left: 50px !important;
+	width: calc(100% - 775px);
+	text-align: center;
+	z-index: 100;
+	padding: 25px;
+	background-image: url('../../common/background_clean.jpg');
+	-webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+	box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+}
+
+.ui-keyboard .ui-keyboard-keyset {
+	text-align: center;
+	background-position: 50% 50%;
+	background-size: cover; 
+	padding: 10px;
+	border-radius: 5px;
+	-moz-transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+	-o-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	transform: translateY(50px);
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	-ms-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+.ui-keyboard.-show .ui-keyboard-keyset {
+	-moz-transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+}
+.ui-keyboard-keyset button {
+	color: #333;
+    font-family: 'Century Schoolbook';
+    font-size: 30px;
+    background-color: #d3c6a5;
+    outline: none;
+    border: 1px solid #333;
+	border-radius: 5px;
+	margin: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.ui-keyboard-keyset button[data-name="space"] {
+	width: 558px;
+}
+.ui-keyboard-keyset button[data-name="shift"] {
+	line-height: 36px;
+	width: 115px;
+}
+.ui-keyboard-keyset button.ui-keyboard-button.ui-state-hover,
+.ui-keyboard-keyset button.ui-keyboard-button.-active {
+	background-color: #d3c6a5;
+	border: 1px solid #333;
+}

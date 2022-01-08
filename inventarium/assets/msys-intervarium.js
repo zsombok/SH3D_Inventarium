@@ -2,7 +2,7 @@ var msysIntervarium;
 var loaded = false;
 
 function msysInitInventarium() {
-	
+
 	(function ($) {
 		msysIntervarium = {
 
@@ -88,12 +88,136 @@ function msysInitInventarium() {
 			},
 
 			init: function () {
-
+				console.log("init");
+				this.is_preview = false;
+				this.config = null;
+				this.$container = null;
+				this.svg = null;
+				this.pic_position = 0;
+				this.game_started = false;
+				this.selected_options = {};
+				this.substep = 0;
 			},
 
 			ready: function () {
-
+				console.log("ready");
+				this.init_game();
 			},
+
+			init_game: function () {
+				console.log("init_game");
+				var $container = $('#inventarium');
+				var $config = $('#inventarium-config');
+				
+				if ($container.length == 0 || $config.length == 0) {
+					console.log("return");
+					return;
+				}
+				
+				console.log($container);
+				this.config = JSON.parse($config.html());
+				this.$container = $container;
+
+				var $text_field = $('<input type="text" class="motto-field" />');
+				this.$container.append($text_field);
+				this.$text_field = $text_field;
+
+				this.init_finish_buttons();
+				this.init_keyboard_fields();
+			},
+
+			init_finish_buttons: function () {
+				console.log("helloka");
+				var $finish_buttons = $(
+					'<div class="finish_buttons -disabled">' +
+					'<div class="finish_button finished">' + this.config.texts.keszvagyok + ' <span class="circle"></span></div>' +
+					'<div class="finish_button sendmail">' + this.config.texts.elkuldom + ' <span class="circle"></span></div>' +
+					'</div>'
+				);
+
+				var $email_field = $(
+					'<div class="email-field-container">' +
+					'<input type="text" class="email-field" />' +
+					'</div>'
+				);
+
+				this.$container.append($finish_buttons);
+				this.$container.append($email_field);
+				this.$email_field = $email_field.find('input');
+			},
+
+			finish: function (e) {
+				var mkb = this.$text_field.getkeyboard();
+				mkb.options.alwaysOpen = false;
+				mkb.close();
+
+				var $email_container = this.$email_field.closest('.email-field-container');
+				var keyboard = this.$email_field.getkeyboard();
+				keyboard.options.alwaysOpen = true;
+				keyboard.reveal();
+				$email_container.addClass('-show');
+
+				keyboard.$keyboard.addClass('email-kb');
+				this.$container.find('.finish_buttons .sendmail').addClass('-active');
+			},
+
+			send_image: function (e) {
+				var self = this;
+				var $email_container = this.$email_field.closest('.email-field-container');
+				var _emails = this.$email_field.val();
+
+				_emails = _emails.split(',');
+				var valid = true;
+				var emails = [];
+				$.each(_emails, function (i, email) {
+					email = email.trim();
+					if (email.length > 0) {
+						if (self.validate_email(email)) {
+							emails.push(email);
+						}
+						else {
+							valid = false;
+						}
+					}
+				});
+
+				$email_container.find('.email-error-message').remove();
+				if (!valid) {
+					$email_container.append('<p class="email-error-message">' + this.config.texts.email_invalid + '</p>');
+				}
+				else if (emails.length === 0) {
+					$email_container.append('<p class="email-error-message">' + this.config.texts.email_nomail + '</p>');
+				}
+				else {
+					var callback = function (png_base64) {
+						var $email_container = self.$email_field.closest('.email-field-container');
+						var keyboard = self.$email_field.getkeyboard();
+
+						var emails_string = emails.join(',');
+						app.sendMail(emails_string, png_base64.split(',')[1]);
+
+						self.$container.hide();
+						$('.email-sent-screen').show();
+						$('.email-success').show();
+						//$('.email-failure').show();
+
+						$('.email-sent-screen .image-holder').css({
+							'background-image': 'url(' + png_base64 + ')',
+						});
+
+						keyboard.options.alwaysOpen = false;
+						keyboard.close();
+						$email_container.removeClass('-show');
+					};
+					this.render_image(callback);
+				}
+			},
+
+			validate_email: function (email) {
+				var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				return re.test(String(email).toLowerCase());
+			},
+
 
 			slider_events: function (e, data) {
 				var $container = e.$el.closest('.content-image-wrapper');
@@ -146,6 +270,7 @@ function msysInitInventarium() {
 			},
 
 			init_keyboard_fields: function () {
+				console.log("halikaKeyboard");
 				this.language = app.language; //$('.header-lang').attr('data-lang');
 
 				$.keyboard.keyaction.dotcom = function (base) {
@@ -179,7 +304,7 @@ function msysInitInventarium() {
 						'shift': '\u21e7',
 						'dotcom': '.com'
 					},
-					customLayout: layouts[this.language],
+					customLayout: layouts['en'],
 					visible: function (e, keyboard, el) {
 						$('.ui-keyboard').addClass('-show');
 					},
@@ -189,23 +314,8 @@ function msysInitInventarium() {
 				this.$email_field.keyboard(args);
 			},
 
-			init_finish_buttons: function () {
-				var $finish_buttons = $(
-					'<div class="finish_buttons -disabled">' +
-					'<div class="finish_button finished">' + this.config.texts.keszvagyok + ' <span class="circle"></span></div>' +
-					'<div class="finish_button sendmail">' + this.config.texts.elkuldom + ' <span class="circle"></span></div>' +
-					'</div>'
-				);
-
-				var $email_field = $(
-					'<div class="email-field-container">' +
-					'<input type="text" class="email-field" />' +
-					'</div>'
-				);
-
-				this.$container.append($finish_buttons);
-				this.$container.append($email_field);
-				this.$email_field = $email_field.find('input');
+			restart: function (e) {
+				app.setPage('gameCastle');
 			},
 
 

@@ -93,7 +93,7 @@ UserPreferences.prototype.initSupportedLanguages = function(supportedLanguages) 
   if (!this.language || this.supportedLanguages.indexOf(this.language) === -1) {
     var defaultLocale = Locale.getDefault();
     if (defaultLocale === null) {
-      defaultLocale = "en";
+      defaultLocale = "hu";
     }
     this.defaultCountry = "";
     var defaultLanguage = defaultLocale;
@@ -119,7 +119,7 @@ UserPreferences.prototype.initSupportedLanguages = function(supportedLanguages) 
     }
     // If no language was found, let's use English by default
     if (this.language === undefined) {
-      this.language = "en";
+      this.language = "hu";
     }
     this.updateDefaultLocale();
   }
