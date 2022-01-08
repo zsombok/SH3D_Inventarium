@@ -1,5 +1,6 @@
 const fs = require('fs');
 const mail = require('@sendgrid/mail');
+let ifr;
 
 // temp key for Borsi
 mail.setApiKey('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');
@@ -50,19 +51,15 @@ class Application {
       let json = fs.readFileSync(`${__dirname}/assets/config_${this.language}.json`);
       document.querySelector('#inventarium-config').innerHTML = json;
     }
-    msysInitInventarium();
 
     
-    let ifr = document.getElementById("gameFrame")?.contentWindow;
-    window.addEventListener("click", e => {
-      ifr?.postMessage("start");
-    }
-    );
+    
+    ifr = document.getElementById("gameFrame")?.contentWindow;
+    msysInitInventarium();
 
     let invList = [];
     window.addEventListener("message", e => {
       const inv = document.getElementById("inventariumList");
-      console.log(inv);
       invList = JSON.parse(e.data);
       inv.innerHTML = "";
       generateInvListDOM();

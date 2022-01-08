@@ -1,5 +1,5 @@
 {
-  "name#1": "1_asztal",
+  "name#1": "Asztal",
   "icon#1": "lib/resources/models/1_asztal.png",
   "model#1": "lib/resources/models/1_asztal.zip!/1_asztal.3ds",
   "width#1": "147",
@@ -12,7 +12,7 @@
   "category#1": "",
   "creator#1": "ZsD",
 
-  "name#2": "2_asztal",
+  "name#2": "Asztal",
   "icon#2": "lib/resources/models/2_asztal.png",
   "model#2": "lib/resources/models/2_asztal.zip!/2_asztal.3ds",
   "width#2": "91",
@@ -26,7 +26,7 @@
   "category#2": "",
   "creator#2": "ZsD",
 
-  "name#3": "3_padszek",
+  "name#3": "Padszék",
   "icon#3": "lib/resources/models/3_padszek.png",
   "model#3": "lib/resources/models/3_padszek.zip!/3_padszek.3ds",
   "width#3": "120",
@@ -39,20 +39,20 @@
   "category#3": "",
   "creator#3": "ZsD",
 
-  "name#4": "4_karosszek",
+  "name#4": "Karosszék",
   "icon#4": "lib/resources/models/4_karosszek.png",
   "model#4": "lib/resources/models/4_karosszek.zip!/4_karosszek.3ds",
-  "width#4": "50",
-  "depth#4": "50",
-  "height#4": "120",
+  "width#4": "60",
+  "depth#4": "48",
+  "height#4": "110",
   "movable#4": "true",
   "doorOrWindow#4": "false",
   "deformable#4": "false",
   "resizable#4": "false",
   "category#4": "",
   "creator#4": "ZsD",
-  "name#5": "5_szek",
 
+  "name#5": "Szék",
   "icon#5": "lib/resources/models/5_szek.png",
   "model#5": "lib/resources/models/5_szek.zip!/5_szek.3ds",
   "width#5": "47",
@@ -65,7 +65,7 @@
   "category#5": "",
   "creator#5": "ZsD",
 
-  "name#6": "6_agy",
+  "name#6": "Ágy",
   "icon#6": "lib/resources/models/6_agy.png",
   "model#6": "lib/resources/models/6_agy.zip!/6_agy.3ds",
   "width#6": "200",
@@ -78,7 +78,7 @@
   "category#6": "",
   "creator#6": "ZsD",
 
-  "name#7": "7_fogas",
+  "name#7": "Fali fogas",
   "icon#7": "lib/resources/models/7_fogas.png",
   "model#7": "lib/resources/models/7_fogas.zip!/7_fogas.3ds",
   "width#7": "144",
@@ -92,7 +92,7 @@
   "category#7": "",
   "creator#7": "ZsD",
 
-  "name#8": "8_mazas-kemence",
+  "name#8": "Mázas kemence",
   "icon#8": "lib/resources/models/8_mazas-kemence.png",
   "model#8": "lib/resources/models/8_mazas-kemence.zip!/8_mazas-kemence.3ds",
   "width#8": "133",
@@ -105,7 +105,7 @@
   "category#8": "",
   "creator#8": "ZsD",
 
-  "name#9": "9_uvegpohar-apro",
+  "name#9": "Üvegpohárka",
   "icon#9": "lib/resources/models/9_uvegpohar-apro.png",
   "model#9": "lib/resources/models/9_uvegpohar-apro.zip!/9_uvegpohar-apro.3ds",
   "width#9": "7",
@@ -118,7 +118,7 @@
   "category#9": "",
   "creator#9": "ZsD",
 
-  "name#10": "10_uvegpohar-hosszu",
+  "name#10": "Üvegpohár",
   "icon#10": "lib/resources/models/10_uvegpohar-hosszu.png",
   "model#10": "lib/resources/models/10_uvegpohar-hosszu.zip!/10_uvegpohar-hosszu.3ds",
   "width#10": "12",
@@ -131,7 +131,7 @@
   "category#10": "",
   "creator#10": "ZsD",
 
-  "name#11": "11_viztarto-uvegcse",
+  "name#11": "Rózsavizes üvegcse",
   "icon#11": "lib/resources/models/11_viztarto-uvegcse.png",
   "model#11": "lib/resources/models/11_viztarto-uvegcse.zip!/11_viztarto-uvegcse.3ds",
   "width#11": "10",
@@ -144,12 +144,12 @@
   "category#11": "",
   "creator#11": "ZsD",
 
-  "name#12": "12_butykos-korso",
+  "name#12": "Butykos korsó",
   "icon#12": "lib/resources/models/12_butykos-korso.png",
   "model#12": "lib/resources/models/12_butykos-korso.zip!/12_butykos-korso.3ds",
   "width#12": "20",
   "depth#12": "21",
-  "height#12": "9",
+  "height#12": "20",
   "movable#12": "true",
   "doorOrWindow#12": "false",
   "deformable#12": "false",
@@ -157,7 +157,7 @@
   "category#12": "",
   "creator#12": "ZsD",
 
-  "name#13": "13_rezgyertyatarto",
+  "name#13": "Réz gyertyatartó",
   "icon#13": "lib/resources/models/13_rezgyertyatarto.png",
   "model#13": "lib/resources/models/13_rezgyertyatarto.zip!/13_rezgyertyatarto.3ds",
   "width#13": "12",
@@ -170,7 +170,7 @@
   "category#13": "",
   "creator#13": "ZsD",
 
-  "name#14": "14_hamuvero-ollo",
+  "name#14": "Hamuverő olló",
   "icon#14": "lib/resources/models/14_hamuvero-ollo.png",
   "model#14": "lib/resources/models/14_hamuvero-ollo.zip!/14_hamuvero-ollo.3ds",
   "width#14": "17",
@@ -183,7 +183,7 @@
   "category#14": "",
   "creator#14": "ZsD",
 
-  "name#15": "15_ruhatarto-rud",
+  "name#15": "Fali ruhaakasztó",
   "icon#15": "lib/resources/models/15_ruhatarto-rud.png",
   "model#15": "lib/resources/models/15_ruhatarto-rud.zip!/15_ruhatarto-rud.3ds",
   "width#15": "103",
@@ -197,7 +197,7 @@
   "category#15": "",
   "creator#15": "ZsD",
 
-  "name#16": "16_magas-szekreny",
+  "name#16": "Magas szekrény",
   "icon#16": "lib/resources/models/16_magas-szekreny.png",
   "model#16": "lib/resources/models/16_magas-szekreny.zip!/16_magas-szekreny.3ds",
   "width#16": "158",
@@ -211,7 +211,7 @@
   "category#16": "",
   "creator#16": "ZsD",
 
-  "name#17": "17_ruhatarto-lada",
+  "name#17": "Ruhatartó láda",
   "icon#17": "lib/resources/models/17_ruhatarto-lada.png",
   "model#17": "lib/resources/models/17_ruhatarto-lada.zip!/17_ruhatarto-lada.3ds",
   "width#17": "173",
@@ -224,7 +224,7 @@
   "category#17": "",
   "creator#17": "ZsD",
 
-  "name#18": "18_ladika",
+  "name#18": "Ládika",
   "icon#18": "lib/resources/models/18_ladika.png",
   "model#18": "lib/resources/models/18_ladika.zip!/18_ladika.3ds",
   "width#18": "79",
@@ -237,7 +237,7 @@
   "category#18": "",
   "creator#18": "ZsD",
 
-  "name#19": "19_flamand-karpit",
+  "name#19": "Flamand kárpit",
   "icon#19": "lib/resources/models/19_flamand-karpit.png",
   "model#19": "lib/resources/models/19_flamand-karpit.zip!/19_flamand-karpit.3ds",
   "width#19": "267",
@@ -251,7 +251,7 @@
   "category#19": "",
   "creator#19": "ZsD",
 
-  "name#20": "20_falikarpit",
+  "name#20": "Falikárpit",
   "icon#20": "lib/resources/models/20_falikarpit.png",
   "model#20": "lib/resources/models/20_falikarpit.zip!/20_falikarpit.3ds",
   "width#20": "62",
@@ -265,7 +265,7 @@
   "category#20": "",
   "creator#20": "ZsD",
 
-  "name#21": "21_borkarpit",
+  "name#21": "Bőrkárpit",
   "icon#21": "lib/resources/models/21_borkarpit.png",
   "model#21": "lib/resources/models/21_borkarpit.zip!/21_borkarpit.3ds",
   "width#21": "57",
@@ -279,7 +279,7 @@
   "category#21": "",
   "creator#21": "ZsD",
 
-  "name#22": "22_rez-csillar",
+  "name#22": "Réz csillár",
   "icon#22": "lib/resources/models/22_rez-csillar.png",
   "model#22": "lib/resources/models/22_rez-csillar.zip!/22_rez-csillar.3ds",
   "width#22": "63",
@@ -293,7 +293,7 @@
   "category#22": "",
   "creator#22": "ZsD",
 
-  "name#23": "23_kalamaris-ladika",
+  "name#23": "Kalamáris ládika",
   "icon#23": "lib/resources/models/23_kalamaris-ladika.png",
   "model#23": "lib/resources/models/23_kalamaris-ladika.zip!/23_kalamaris-ladika.3ds",
   "width#23": "30",
@@ -306,7 +306,7 @@
   "category#23": "",
   "creator#23": "ZsD",
 
-  "name#24": "24_torok-szonyeg",
+  "name#24": "Török szőnyeg",
   "icon#24": "lib/resources/models/24_torok-szonyeg.png",
   "model#24": "lib/resources/models/24_torok-szonyeg.zip!/24_torok-szonyeg.3ds",
   "width#24": "171",
@@ -319,6 +319,19 @@
   "resizable#24": "false",
   "category#24": "",
   "texture#24": "lib/resources/models/textures/24_torok-szonyeg.jpg",
-  "creator#24": "ZsD"
+  "creator#24": "ZsD",
+
+  "name#25": "Box",
+  "icon#25": "lib/resources/models/box.jpg",
+  "model#25": "lib/resources/models/box.zip!/box.obj",
+  "width#25": "40",
+  "depth#25": "40",
+  "height#25": "40",
+  "movable#25": "true",
+  "doorOrWindow#25": "false",
+  "deformable#25": "false",
+  "resizable#25": "false",
+  "category#25": "",
+  "creator#25": "ZsD"
 
 }

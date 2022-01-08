@@ -63,7 +63,7 @@ function UserPreferences() {
   /** @type {TextureImage}  */
   this.newWallPattern = null;
   this.newWallThickness = 7.5;
-  this.newWallHeight = 250;
+  this.newWallHeight = 350;
   this.newWallBaseboardThickness = 1;
   this.newWallBaseboardHeight = 7;
   this.newRoomFloorColor = null;
@@ -78,7 +78,7 @@ function UserPreferences() {
   this.ignoredActionTips = {};
 }
 
-UserPreferences.DEFAULT_SUPPORTED_LANGUAGES = ["bg", "cs", "de", "el", "en", "es", "fr", "it", "ja", "hu", "nl", "pl", "pt", "ru", "sv", "vi", "zh_CN", "zh_TW"];
+UserPreferences.DEFAULT_SUPPORTED_LANGUAGES = ["sk", "bg", "cs", "de", "el", "en", "es", "fr", "it", "ja", "hu", "nl", "pl", "pt", "ru", "sv", "vi", "zh_CN", "zh_TW"];
 
 UserPreferences.DEFAULT_TEXT_STYLE = new TextStyle(18);
 UserPreferences.DEFAULT_ROOM_TEXT_STYLE = new TextStyle(24);

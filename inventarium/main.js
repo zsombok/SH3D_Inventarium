@@ -21,7 +21,6 @@ function createWindow () {
 
 app.whenReady().then(() => {
   createWindow();
-
 });
 
 app.on('window-all-closed', function () {

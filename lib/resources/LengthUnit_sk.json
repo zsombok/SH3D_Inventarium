@@ -1,0 +1,14 @@
+{
+  "squareMeterUnit": "m²",
+  "squareFootUnit": "sq ft",
+  "inchDecimalsFormatWithUnit": "{0,number}\"",
+  "inchUnit": "inch",
+  "meterUnit": "m",
+  "footInchSeparator": "",
+  "footInchEighthFormat": "{0,number,integer}''{1,number,integer}{2}\"",
+  "footFormat": "{0,number,integer}''",
+  "inchDecimalsFormat": "{0,number}",
+  "centimeterUnit": "cm",
+  "millimeterUnit": "mm",
+  "footInchFormat": "{0,number,integer}''{1,number}\""
+}

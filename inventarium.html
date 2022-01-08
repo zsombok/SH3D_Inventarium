@@ -117,13 +117,15 @@
  * No-touch devices common CSS
  */
     #home-pane-toolbar {
+      display: none;
       top: 0;
       height: 30px;
       white-space: nowrap;
+      
     }
 
     #catalog-furniture-pane {
-      top: 30px;
+      top: 0px;
       left: 0;
       width: 296px;
       height: calc(100% - 30px);
@@ -131,7 +133,7 @@
     }
 
     #furniture-catalog {
-      height: 70%;
+      height: 100%;
       width: 100%;
       overflow-y: hidden;
     }
@@ -146,6 +148,7 @@
       top: 70%;
       left: 0;
       width: 100%;
+      display: none;
     }
 
     #furniture-view {
@@ -153,6 +156,7 @@
       width: 100%;
       height: calc(30% - 4px);
       box-sizing: border-box;
+      display: none;
     }
 
     #furniture-view .tree-table {
@@ -168,13 +172,13 @@
     }
 
     #furniture-plan-splitter {
-      top: 30px;
+      top: 0px;
       left: 296px;
       height: calc(100% - 30px);
     }
 
     #plan-3D-view-pane {
-      top: 30px;
+      top: 0px;
       left: 300px;
       width: calc(100% - 300px);
       height: calc(100% - 30px);
@@ -1507,7 +1511,7 @@
         })
       : new SweetHome3DJSApplication();
 
-      Locale.setDefault("en");
+      Locale.setDefault(window.parent.app.language);
 
       var homeName = useServer ? "HomeTest" : "lib/resources/models/test_room_01.sh3d";
       
@@ -1518,8 +1522,7 @@
         homeLoaded: function (home) {
           home.setName(homeName);
           application.addHome(home);
-          // application.preferences.setLanguage("hu");
-          console.log(application);
+          // application.preferences.;
 
           if (!skipTests) {
             setTimeout(testHomeModifications, 1000);
