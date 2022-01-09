@@ -8,7 +8,19 @@ mail.setApiKey('SG.lH8_dGaeR_y500LkOikYAg.73WBAbOT0Rsw5WI6x8Xqq7qDi0PvA3j3d7HDQk
 class Application {
 
   constructor() {
-    this.setLanguage('hu');
+    this.setLanguage('sk');
+    this.game = 'Urfiak_haza';
+  }
+
+  setGame(game) {
+    console.log(game);
+    if (game == 'castle') {
+      this.game = 'Urfiak_haza';
+    }
+    if (game == 'room') {
+      this.game = 'Sajat_szoba';
+    }
+    this.setPage('game');
   }
 
   setLanguage(language) {
@@ -26,6 +38,10 @@ class Application {
       document.querySelector('.' + this.language).classList.add('active');
     }
     if (['hu', 'en', 'sk'].includes(name)) {
+      let html = fs.readFileSync(__dirname + '/headers/' + name + '.html').toString();
+      document.querySelector('#header').innerHTML = html;
+    }
+    if (['huGame', 'enGame', 'skGame'].includes(name)) {
       let html = fs.readFileSync(__dirname + '/headers/' + name + '.html').toString();
       document.querySelector('#header').innerHTML = html;
     }
@@ -47,37 +63,48 @@ class Application {
       }
     }
 
-    if (name == 'gameCastle') {
-      let json = fs.readFileSync(`${__dirname}/assets/config_${this.language}.json`);
-      document.querySelector('#inventarium-config').innerHTML = json;
+    if (name.includes("game")) {
+      this.setHeader(this.language + "Game");
+      if (name == "game") {
+        let json = fs.readFileSync(`${__dirname}/assets/config_${this.language}.json`);
+        document.querySelector('#inventarium-config').innerHTML = json;
+      }
     }
 
-    
-    
+
+
     ifr = document.getElementById("gameFrame")?.contentWindow;
+    window.addEventListener("click", e => {
+      // console.log(e);
+      ifr?.postMessage("hello");
+    })
     msysInitInventarium();
 
     let invList = [];
     window.addEventListener("message", e => {
       const inv = document.getElementById("inventariumList");
       invList = JSON.parse(e.data);
+      // console.log(invList);
       inv.innerHTML = "";
       generateInvListDOM();
 
       // let home3DView = ifr.document.querySelector("#home-3D-view");
       // if (home3DView) {
-      
+
       // var image = home3DView.toDataURL("image/png").replace("image/png", "image/octet-stream");
       // window.location.href = image;
       // }
     })
 
-    const generateInvListDOM = function (){
+    const generateInvListDOM = function () {
       if (invList.length === 0) return;
       const inv = document.getElementById("inventariumList");
       invList.forEach(el => {
         const element = document.createElement("div");
-        element.innerText = el;
+        element.innerText = el.name + el.desc + el.info + el.img;
+        const imgEl = document.createElement("img");
+        imgEl.src = "../" + el.img;
+        element.append(imgEl);
         inv.append(element);
       });
     }

@@ -207,6 +207,67 @@
   margin-top: -23px;
 }
 
+#gameContent {
+  height: 800px;
+}
+
+#gameFrame {
+  width: 1800px;
+  height: 100%;
+}
+
+#gameFrame .small {
+}
+
+#rc-container {
+  margin: 100px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+}
+
+#rc-container .button {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 30px;
+  border: 4px solid #000;
+  background-color: #eee;
+  font-family: "Klavikach Condensed", sans-serif;
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.rc-pic {
+  position: relative;
+  box-sizing: border-box;
+  height: 600px;
+  width: 48%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.24);
+}
+
+.rc-pic-1 {
+  filter: brightness(1.2) saturate(1.2);
+  background-image: url("../../lib/resources/_Urfiak_haza.png");
+}
+
+.rc-pic-2 {
+  filter: saturate(1.4);
+  background-image: url("../../lib/resources/_Sajat_szoba.png");
+}
+
 .email-sent-screen {
   display: none;
   text-align: center;
@@ -293,33 +354,33 @@
 }
 
 .finish_buttons {
-	position: absolute;
-    right: 55px;
-    bottom: 75px;
-    pointer-events: auto;
+  position: absolute;
+  right: 55px;
+  bottom: 75px;
+  pointer-events: auto;
 }
 .finish_buttons.-disabled {
-	opacity: 0.5;
-	pointer-events: none;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .finish_button {
-	font-family: 'Klavikach Condensed', sans-serif;
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 400;
-    cursor: pointer;
-    text-align: right;
+  font-family: "Klavikach Condensed", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: right;
 }
 .finish_button .circle {
-	display: inline-block;
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin-left: 15px;
-    border: 2px solid #333;
-    border-radius: 100%;
-    background-color: #fff;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 15px;
+  border: 2px solid #333;
+  border-radius: 100%;
+  background-color: #fff;
 }
 .finish_button.-active .circle {
-	background-color: #8cc63f;
+  background-color: #8cc63f;
 }

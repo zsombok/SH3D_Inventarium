@@ -55,7 +55,7 @@ FurnitureCatalogListPanel.prototype.createComponents = function (catalog, prefer
   // Filtering
   var filteringDiv = document.createElement("div");
   filteringDiv.id = "furniture-filter";
-  this.container.insertBefore(filteringDiv, furnitureCatalogList);
+  // this.container.insertBefore(filteringDiv, furnitureCatalogList);
 
   var categorySelector = document.createElement("select");
   var searchInput = document.createElement("input");

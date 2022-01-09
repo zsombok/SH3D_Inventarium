@@ -599,7 +599,7 @@ HomePane.prototype.getMenuAction = function(actionType) {
 HomePane.prototype.addHomeListener = function(home) {
   var homePane = this;
   home.addPropertyChangeListener("CAMERA", function(ev) {
-      homePane.setToggleButtonModelSelected(HomeView.ActionType.VIEW_FROM_TOP, home.getCamera() == home.getTopCamera());
+      homePane.setToggleButtonModelSelected(HomeView.ActionType.VIEW_FROM_TOP, home.getCamera() !== home.getTopCamera());
       homePane.setToggleButtonModelSelected(HomeView.ActionType.VIEW_FROM_OBSERVER, home.getCamera() == home.getObserverCamera());
     });
 }

@@ -61,7 +61,7 @@ function PlanComponent(containerOrCanvasId, home, preferences, object3dFactory, 
     if (this.container.style.overflow) {
       this.scrollPane.style.overflow = this.container.style.overflow;
     } else {
-      this.scrollPane.style.overflow = "scroll";
+      this.scrollPane.style.overflow = "hidden";
     }
     this.view = document.createElement("div");
     this.view.setAttribute("id", containerOrCanvasId + ".view");

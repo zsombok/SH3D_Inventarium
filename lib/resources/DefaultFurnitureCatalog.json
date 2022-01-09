@@ -11,6 +11,7 @@
   "resizable#1": "false",
   "category#1": "",
   "creator#1": "ZsD",
+  "price#1": "3.75",
 
   "name#2": "Asztal",
   "icon#2": "lib/resources/models/2_asztal.png",
@@ -25,6 +26,7 @@
   "resizable#2": "false",
   "category#2": "",
   "creator#2": "ZsD",
+  "price#2": "2",
 
   "name#3": "Padszék",
   "icon#3": "lib/resources/models/3_padszek.png",
@@ -38,6 +40,7 @@
   "resizable#3": "false",
   "category#3": "",
   "creator#3": "ZsD",
+  "price#3": "1",
 
   "name#4": "Karosszék",
   "icon#4": "lib/resources/models/4_karosszek.png",
@@ -51,6 +54,7 @@
   "resizable#4": "false",
   "category#4": "",
   "creator#4": "ZsD",
+  "price#4": "2.6",
 
   "name#5": "Szék",
   "icon#5": "lib/resources/models/5_szek.png",
@@ -64,6 +68,7 @@
   "resizable#5": "false",
   "category#5": "",
   "creator#5": "ZsD",
+  "price#5": "0.5",
 
   "name#6": "Ágy",
   "icon#6": "lib/resources/models/6_agy.png",
@@ -77,6 +82,7 @@
   "resizable#6": "false",
   "category#6": "",
   "creator#6": "ZsD",
+  "price#6": "25.4",
 
   "name#7": "Fali fogas",
   "icon#7": "lib/resources/models/7_fogas.png",
@@ -91,6 +97,7 @@
   "resizable#7": "false",
   "category#7": "",
   "creator#7": "ZsD",
+  "price#7": "1.15",
 
   "name#8": "Mázas kemence",
   "icon#8": "lib/resources/models/8_mazas-kemence.png",
@@ -104,6 +111,7 @@
   "resizable#8": "false",
   "category#8": "",
   "creator#8": "ZsD",
+  "price#8": "16.15",
 
   "name#9": "Üvegpohárka",
   "icon#9": "lib/resources/models/9_uvegpohar-apro.png",
@@ -117,6 +125,7 @@
   "resizable#9": "false",
   "category#9": "",
   "creator#9": "ZsD",
+  "price#9": "0.6",
 
   "name#10": "Üvegpohár",
   "icon#10": "lib/resources/models/10_uvegpohar-hosszu.png",
@@ -130,6 +139,7 @@
   "resizable#10": "false",
   "category#10": "",
   "creator#10": "ZsD",
+  "price#10": "0.24",
 
   "name#11": "Rózsavizes üvegcse",
   "icon#11": "lib/resources/models/11_viztarto-uvegcse.png",
@@ -143,6 +153,7 @@
   "resizable#11": "false",
   "category#11": "",
   "creator#11": "ZsD",
+  "price#11": "0.24",
 
   "name#12": "Butykos korsó",
   "icon#12": "lib/resources/models/12_butykos-korso.png",
@@ -156,6 +167,7 @@
   "resizable#12": "false",
   "category#12": "",
   "creator#12": "ZsD",
+  "price#12": "0.18",
 
   "name#13": "Réz gyertyatartó",
   "icon#13": "lib/resources/models/13_rezgyertyatarto.png",
@@ -169,6 +181,7 @@
   "resizable#13": "false",
   "category#13": "",
   "creator#13": "ZsD",
+  "price#13": "3.28",
 
   "name#14": "Hamuverő olló",
   "icon#14": "lib/resources/models/14_hamuvero-ollo.png",
@@ -182,6 +195,7 @@
   "resizable#14": "false",
   "category#14": "",
   "creator#14": "ZsD",
+  "price#14": "0.42",
 
   "name#15": "Fali ruhaakasztó",
   "icon#15": "lib/resources/models/15_ruhatarto-rud.png",
@@ -196,6 +210,7 @@
   "resizable#15": "false",
   "category#15": "",
   "creator#15": "ZsD",
+  "price#15": "0.12",
 
   "name#16": "Magas szekrény",
   "icon#16": "lib/resources/models/16_magas-szekreny.png",
@@ -210,6 +225,7 @@
   "resizable#16": "false",
   "category#16": "",
   "creator#16": "ZsD",
+  "price#16": "10",
 
   "name#17": "Ruhatartó láda",
   "icon#17": "lib/resources/models/17_ruhatarto-lada.png",
@@ -223,6 +239,7 @@
   "resizable#17": "false",
   "category#17": "",
   "creator#17": "ZsD",
+  "price#17": "4",
 
   "name#18": "Ládika",
   "icon#18": "lib/resources/models/18_ladika.png",
@@ -236,25 +253,27 @@
   "resizable#18": "false",
   "category#18": "",
   "creator#18": "ZsD",
+  "price#18": "1",
 
   "name#19": "Flamand kárpit",
   "icon#19": "lib/resources/models/19_flamand-karpit.png",
   "model#19": "lib/resources/models/19_flamand-karpit.zip!/19_flamand-karpit.3ds",
   "width#19": "267",
   "depth#19": "2",
-  "height#19": "329",
+  "height#19": "320",
   "movable#19": "true",
-  "elevation#19": "40",
+  "elevation#19": "20",
   "doorOrWindow#19": "false",
   "deformable#19": "false",
   "resizable#19": "false",
   "category#19": "",
   "creator#19": "ZsD",
-
-  "name#20": "Falikárpit",
-  "icon#20": "lib/resources/models/20_falikarpit.png",
-  "model#20": "lib/resources/models/20_falikarpit.zip!/20_falikarpit.3ds",
-  "width#20": "62",
+  "price#19": "188",
+  
+  "name#20": "Bőrkárpit",
+  "icon#20": "lib/resources/models/20_borkarpit.png",
+  "model#20": "lib/resources/models/20_borkarpit.zip!/20_borkarpit.3ds",
+  "width#20": "71",
   "depth#20": "2",
   "height#20": "248",
   "movable#20": "true",
@@ -264,13 +283,14 @@
   "resizable#20": "false",
   "category#20": "",
   "creator#20": "ZsD",
+  "price#20": "12",
 
-  "name#21": "Bőrkárpit",
-  "icon#21": "lib/resources/models/21_borkarpit.png",
-  "model#21": "lib/resources/models/21_borkarpit.zip!/21_borkarpit.3ds",
-  "width#21": "57",
+  "name#21": "Falikárpit",
+  "icon#21": "lib/resources/models/21_falikarpit.png",
+  "model#21": "lib/resources/models/21_falikarpit.zip!/21_falikarpit.3ds",
+  "width#21": "62",
   "depth#21": "2",
-  "height#21": "71",
+  "height#21": "248",
   "movable#21": "true",
   "elevation#21": "40",
   "doorOrWindow#21": "false",
@@ -278,6 +298,7 @@
   "resizable#21": "false",
   "category#21": "",
   "creator#21": "ZsD",
+  "price#21": "5",
 
   "name#22": "Réz csillár",
   "icon#22": "lib/resources/models/22_rez-csillar.png",
@@ -292,6 +313,7 @@
   "resizable#22": "false",
   "category#22": "",
   "creator#22": "ZsD",
+  "price#22": "10",
 
   "name#23": "Kalamáris ládika",
   "icon#23": "lib/resources/models/23_kalamaris-ladika.png",
@@ -305,12 +327,13 @@
   "resizable#23": "false",
   "category#23": "",
   "creator#23": "ZsD",
+  "price#23": "1",
 
   "name#24": "Török szőnyeg",
   "icon#24": "lib/resources/models/24_torok-szonyeg.png",
   "model#24": "lib/resources/models/24_torok-szonyeg.zip!/24_torok-szonyeg.3ds",
-  "width#24": "171",
-  "depth#24": "130",
+  "width#24": "130",
+  "depth#24": "171",
   "height#24": "2",
   "dropOnTopElevation#24": "2",
   "movable#24": "true",
@@ -320,8 +343,9 @@
   "category#24": "",
   "texture#24": "lib/resources/models/textures/24_torok-szonyeg.jpg",
   "creator#24": "ZsD",
+  "price#24": "6",
 
-  "name#25": "Box",
+  "_name#25": "Box",
   "icon#25": "lib/resources/models/box.jpg",
   "model#25": "lib/resources/models/box.zip!/box.obj",
   "width#25": "40",
@@ -332,6 +356,7 @@
   "deformable#25": "false",
   "resizable#25": "false",
   "category#25": "",
-  "creator#25": "ZsD"
+  "creator#25": "ZsD",
+  "price#25": "4"
 
 }

@@ -103,7 +103,7 @@ function msysInitInventarium() {
 			},
 
 			init_game: function () {
-				var $container = $('#inventarium');
+				var $container = $('body');
 				var $config = $('#inventarium-config');
 				
 				if ($container.length == 0 || $config.length == 0) {

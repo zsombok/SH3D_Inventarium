@@ -47,7 +47,7 @@ function UserPreferences() {
   this.defaultValueAddedTaxPercentage = null;
   /** @type {LengthUnit} */
   this.unit = null;
-  this.furnitureCatalogViewedInTree = false;
+  this.furnitureCatalogViewedInTree = true;
   this.aerialViewCenteredOnSelectionEnabled = false;
   this.observerCameraSelectedAtChange = true;
   this.navigationPanelVisible = true;
@@ -55,7 +55,7 @@ function UserPreferences() {
   this.rulersVisible = true;
   this.gridVisible = true;
   this.defaultFontName = null;
-  this.furnitureViewedFromTop = true;
+  this.furnitureViewedFromTop = false;
   this.furnitureModelIconSize = 128;
   this.roomFloorColoredOrTextured = true;
   /** @type {TextureImage} */
