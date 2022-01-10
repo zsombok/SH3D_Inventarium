@@ -1,5 +1,9 @@
 {
   "texts": {
+    "forint": "forinty",
+    "denar": "den\u00e1rov",
+    "total": "Suma celkom:",
+    "megse": "Zrušiť",
     "keszvagyok": "Hotov\u00e9",
     "elkuldom": "Odosla\u0165",
     "email_invalid": "Neplatn\u00e1 emailov\u00e1 adresa",

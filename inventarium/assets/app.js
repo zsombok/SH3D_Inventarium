@@ -13,7 +13,6 @@ class Application {
   }
 
   setGame(game) {
-    console.log(game);
     if (game == 'castle') {
       this.game = 'Urfiak_haza';
     }
@@ -74,38 +73,65 @@ class Application {
 
 
     ifr = document.getElementById("gameFrame")?.contentWindow;
-    window.addEventListener("click", e => {
-      // console.log(e);
-      ifr?.postMessage("hello");
-    })
+    // window.addEventListener("click", e => {
+    //   // console.log(e);
+    //   ifr?.postMessage("hello");
+    // })
     msysInitInventarium();
 
     let invList = [];
     window.addEventListener("message", e => {
-      const inv = document.getElementById("inventariumList");
+      const inv = document.getElementById("inventariumList").querySelector(".list");
       invList = JSON.parse(e.data);
-      // console.log(invList);
       inv.innerHTML = "";
       generateInvListDOM();
-
-      // let home3DView = ifr.document.querySelector("#home-3D-view");
-      // if (home3DView) {
-
-      // var image = home3DView.toDataURL("image/png").replace("image/png", "image/octet-stream");
-      // window.location.href = image;
-      // }
+      const totEl = document.getElementById("inventariumList").querySelector(".total");
+      totEl.innerText = generateTotalText();
     })
 
+    const generateTotalText = function () {
+      const texts = msysIntervarium.TextSlider.config.texts;
+      console.log(invList.total);
+      const whole = Math.floor(invList.total);
+      const decimals = Math.round((invList.total - whole) * 100);
+      return texts.total + " " + whole + " " + texts.forint + " " + decimals + " " + texts.denar;
+    }
+
     const generateInvListDOM = function () {
-      if (invList.length === 0) return;
-      const inv = document.getElementById("inventariumList");
-      invList.forEach(el => {
-        const element = document.createElement("div");
-        element.innerText = el.name + el.desc + el.info + el.img;
+      if (invList.furnitureArray.length === 0) return;
+      const inv = document.getElementById("inventariumList").querySelector(".list");
+
+      invList.furnitureArray.forEach(el => {
+        const liItem = document.createElement("div");
+        liItem.classList.add("listItem");
         const imgEl = document.createElement("img");
         imgEl.src = "../" + el.img;
-        element.append(imgEl);
-        inv.append(element);
+        liItem.append(imgEl);
+
+        const infos = document.createElement("div");
+        infos.classList.add("infos");
+        liItem.append(infos);
+
+        const title = document.createElement("div");
+        title.innerText = el.name;
+        title.classList.add("title");
+        infos.append(title);
+        const info = document.createElement("div");
+        info.innerText = el.desc;
+        info.classList.add("info");
+        infos.append(info);
+        const price = document.createElement("div");
+        price.innerText = el.info;
+        price.classList.add("price");
+        infos.append(price);
+        const quantityContainer = document.createElement("div");
+        quantityContainer.classList.add("quantityContainer");
+        const quantity = document.createElement("div");
+        quantity.innerText = el.quantity;
+        quantity.classList.add("quantity");
+        quantityContainer.append(quantity);
+        liItem.append(quantityContainer);
+        inv.append(liItem);
       });
     }
   }

@@ -83,6 +83,7 @@ function msysInitInventarium() {
 				'next': ['click', '.inventarium-slider-nav-right', 'next'],
 				'prev': ['click', '.inventarium-slider-nav-left', 'prev'],
 				'finish': ['click', '.finish_button.finished.-active', 'finish'],
+				'cancel': ['click', '.finish_button.finished.-activeRed', 'cancel'],
 				'send_image': ['click', '.finish_button.sendmail.-active', 'send_image'],
 				'restart': ['click', '.heraldika-restart', 'restart'],
 			},
@@ -91,6 +92,7 @@ function msysInitInventarium() {
 				this.is_preview = false;
 				this.config = null;
 				this.$container = null;
+				this.$finish_buttons = null;
 				this.svg = null;
 				this.pic_position = 0;
 				this.game_started = false;
@@ -114,7 +116,7 @@ function msysInitInventarium() {
 				this.$container = $container;
 
 				var $text_field = $('<input type="text" class="motto-field" />');
-				this.$container.append($text_field);
+				// this.$container.append($text_field);
 				this.$text_field = $text_field;
 				// console.log(this.$text_field);
 				
@@ -123,12 +125,14 @@ function msysInitInventarium() {
 			},
 
 			init_finish_buttons: function () {
-				var $finish_buttons = $(
-					'<div class="finish_buttons -active">' +
-					'<div class="finish_button finished -active">' + this.config.texts.keszvagyok + ' <span class="circle"></span></div>' +
-					'<div class="finish_button sendmail">' + this.config.texts.elkuldom + ' <span class="circle"></span></div>' +
-					'</div>'
-				);
+				$finish_buttons = $(".get_list_buttons");
+				$finish_buttons.children()[0].innerHTML = this.config.texts.keszvagyok + $finish_buttons.children()[0].innerHTML;
+				// var $finish_buttons = $(
+				// 	'<div class="finish_buttons -active">' +
+				// 	'<div class="finish_button finished -active">' + this.config.texts.keszvagyok + ' <span class="circle"></span></div>' +
+				// 	// '<div class="finish_button sendmail">' + this.config.texts.elkuldom + ' <span class="circle"></span></div>' +
+				// 	'</div>'
+				// );
 
 				var $email_field = $(
 					'<div class="email-field-container">' +
@@ -136,7 +140,7 @@ function msysInitInventarium() {
 					'</div>'
 				);
 
-				this.$container.append($finish_buttons);
+				// this.$container.append($finish_buttons);
 				this.$container.append($email_field);
 				this.$email_field = $email_field.find('input');
 			},
@@ -146,16 +150,45 @@ function msysInitInventarium() {
 				// var mkb = this.$text_field.getkeyboard();
 				// mkb.options.alwaysOpen = false;
 				// mkb.close();
+				document.getElementById("inventariumList").classList.remove("hiddenList");
+
+				var $butsEl = $('.get_list_buttons'); // document.getElementsByClassName("get_list_buttons")[0]
+				$butsEl.empty();
+				var texts = msysIntervarium.TextSlider.config.texts;
+
+				var $finish_buttons = $(
+					'<div class="finish_button finished -activeRed">' + texts.megse + ' <span class="circle"></span></div>' +
+					'<div class="finish_button sendmail -active">' + texts.elkuldom + ' <span class="circle"></span></div>'
+				);
+
+				$butsEl.append($finish_buttons);
+
 				ifr?.postMessage("start");
-				console.log("clicked");
+				document.getElementById("gameFrameContainer").classList.add("small");
 				var $email_container = msysIntervarium.TextSlider.$email_field.closest('.email-field-container');
 				var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();
 				keyboard.options.alwaysOpen = true;
-				keyboard.reveal();
-				$email_container.addClass('-show');
+				// keyboard.reveal();
+				// $email_container.addClass('-show');
 
-				keyboard.$keyboard.addClass('email-kb');
-				msysIntervarium.TextSlider.$container.find('.finish_buttons .sendmail').addClass('-active');
+
+				// keyboard.$keyboard.addClass('email-kb');
+				// msysIntervarium.TextSlider.$container.find('.finish_buttons .sendmail').addClass('-active');
+			},
+
+			cancel: function (e) {
+				var $butsEl = $('.get_list_buttons');
+				$butsEl.empty();
+				var texts = msysIntervarium.TextSlider.config.texts;
+
+				var $finish_buttons = $(
+					'<div class="finish_button finished -active">' + texts.keszvagyok + ' <span class="circle"></span></div>'
+				);
+
+				$butsEl.append($finish_buttons);
+				document.getElementById("gameFrameContainer").classList.remove("small");
+				document.getElementById("inventariumList").classList.add("hiddenList");
+
 			},
 
 			send_image: function (e) {

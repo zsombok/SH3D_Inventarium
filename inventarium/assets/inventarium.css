@@ -208,15 +208,124 @@
 }
 
 #gameContent {
+  position: relative;
   height: 800px;
 }
 
 #gameFrame {
-  width: 1800px;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1820px;
+  height: 800px;
 }
 
-#gameFrame .small {
+#gameFrameContainer {
+  transform-origin: top left;
+  position: absolute;
+  transition: transform 2s, width 2s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+}
+#gameFrameContainer.small {
+  width: 879px;
+  transform: scale(0.5);
+}
+
+#inventariumList {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 500px);
+  height: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 500px;
+  transition: opacity 1s;
+}
+
+#inventariumList.hiddenList {
+  opacity: 0;
+}
+
+#inventariumList .listHeader {
+  margin-top: 8px;
+  height: 28px;
+  font-size: 2em;
+  font-weight: bold;
+  flex: 0;
+}
+
+#inventariumList .list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: calc(100% - 68px);
+  margin: 16px 0px;
+}
+
+#inventariumList .total {
+  height: 40px;
+  font-size: 2em;
+  text-align: right;
+  flex: 0;
+}
+
+#inventariumList .listItem{
+  display: flex;
+  padding: 4px;
+  height: 60px;
+  width: 49%;
+  margin-bottom: 4px;
+  background-color: rgba(255, 255, 250, 0.4);
+  border-radius: 12px;
+}
+
+#inventariumList .listItem .infos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  line-height: 1;
+}
+
+#inventariumList .listItem img{
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  margin-right: 8px;
+}
+
+#inventariumList .listItem > div{
+}
+
+#inventariumList .listItem .title{
+  font-size: 1.5em;
+}
+
+#inventariumList .listItem .quantityContainer{
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inventariumList .listItem .quantity{
+  width: 40px;
+  font-size: 1.5em;
+}
+
+#sub_header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
 }
 
 #rc-container {
@@ -255,7 +364,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 16px;
-  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.24);
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.24);
 }
 
 .rc-pic-1 {
@@ -364,6 +473,7 @@
   pointer-events: none;
 }
 .finish_button {
+  display: inline;
   font-family: "Klavikach Condensed", sans-serif;
   font-size: 30px;
   line-height: 40px;
@@ -371,16 +481,26 @@
   cursor: pointer;
   text-align: right;
 }
+
+.finish_button:last-child {
+  margin-left: 80px;
+}
+
 .finish_button .circle {
   display: inline-block;
   width: 30px;
   height: 30px;
   vertical-align: middle;
-  margin-left: 15px;
+  margin-left: 8px;
   border: 2px solid #333;
   border-radius: 100%;
   background-color: #fff;
 }
+
 .finish_button.-active .circle {
   background-color: #8cc63f;
+}
+
+.finish_button.-activeRed .circle {
+  background-color: #d15959;
 }

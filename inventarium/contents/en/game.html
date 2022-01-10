@@ -1,10 +1,21 @@
-<div class="content-text">Decorate a room with items from the 1638 inventory.</div>
-<div id="gameContent">
-  <iframe id="gameFrame" src="../inventarium.html" frameborder="0"></iframe>
-  <script id="inventarium-config" type="application/json"></script>
-  <div id="inventariumList" style="display: inline;"></div>
-  <div id="inventarium" style="display: inline;"></div>
+<div id="sub_header">
+  <div class="content-text">Decorate a room with items from the 1638 inventory.</div>
+  <div class="get_list_buttons -active">
+    <div class="finish_button finished -active"><span class="circle"></span></div>
+  </div>
 </div>
+<div id="gameContent">
+  <div id="gameFrameContainer">
+    <iframe id="gameFrame" src="../inventarium.html" frameborder="0"></iframe>
+  </div>
+  <script id="inventarium-config" type="application/json"></script>
+  <div id="inventariumList" class="hiddenList">
+    <div class="listHeader">PRICE LIST OF CASSOVIAN AND VIENNESE MASTERS</div>
+    <div class="list"></div>
+    <div class="total"></div>
+  </div>
+</div>
+<div id="inventarium" style="display: inline;"></div>
 <div class="email-sent-screen">
   <div class="email-sent-screen-inner">
     <h1 class="email-success">Sikeres e-mail küldés</h1>

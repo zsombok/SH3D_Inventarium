@@ -1495,7 +1495,7 @@
       });
 
     window.addEventListener("message", e => {
-      console.log(e);
+      // console.log(e);
       parent.postMessage(JSON.stringify(createList(application.homes[0].furniture)), "*")
     }
     );
@@ -1503,16 +1503,21 @@
     function createList(array) {
       let furnitureArray = [];
       let counter = 0;
+      let total = 0;
       for (let i = 0; i < array.length; i++) {
         if (array[i].doorOrWindow === true) continue;
         const name = array[i].name;
+        if (furnitureArray.some(e => e.name == name)) continue;
         const desc = array[i].description;
         const info = array[i].information;
         const img = array[i].icon.url;
-        furnitureArray[counter++] = { name, desc, info, img };
-        // furnitureArray[counter++] = elementName + " - " + elementDesc + " - " + elementInfo;
+        const quantity = array.filter(x => x.name == name).length;
+        furnitureArray[counter++] = { name, desc, info, img, quantity };
+        console.log(Number.parseFloat(array[i].price));
+        console.log(quantity);
+        total += Number.parseFloat(array[i].price) * quantity;
       }
-      return furnitureArray;
+      return {furnitureArray, total};
     };
   </script>
 

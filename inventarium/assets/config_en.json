@@ -1,6 +1,10 @@
 {
   "texts": {
-    "keszvagyok": "Decoration done",
+    "forint": "florins",
+    "denar": "pennies",
+    "total": "Total:",
+    "megse": "Cancel",
+    "keszvagyok": "I'm done decorating. The shopping list, please.",
     "elkuldom": "Send",
     "email_invalid": "Invalid email address",
     "email_nomail": "You have not entered an email address",

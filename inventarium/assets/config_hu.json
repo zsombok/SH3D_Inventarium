@@ -1,6 +1,10 @@
 {
   "texts": {
-    "keszvagyok": "K\u00e9rem a bev\u00e1s\u00e1rl\u00f3list\u00e1t!",
+    "forint": "forint",
+    "denar": "d\u00e9n\u00e1r",
+    "total": "V\u00e9g\u00F6sszeg:",
+    "megse": "M\u00e9gse",
+    "keszvagyok": "K\u00e9sz vagyok, k\u00e9rem a bev\u00e1s\u00e1rl\u00f3list\u00e1t",
     "elkuldom": "Elk\u00fcld\u00f6m",
     "email_invalid": "\u00c9rv\u00e9nytelen e-mail c\u00edm",
     "email_nomail": "Nem adott meg e-mail c\u00edmet",
