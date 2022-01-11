@@ -146,8 +146,8 @@ class Application {
       html: '[attachment]',
       attachments: [
         {
-          filename: 'attachment.png',
-          type: 'image/png',
+          filename: 'attachment.jpg',
+          type: 'image/jpeg',
           content: attachment,
           disposition: 'attachment'
         }

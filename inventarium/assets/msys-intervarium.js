@@ -1,3 +1,7 @@
+const jimp = require('jimp');
+const screenshot = require('screenshot-desktop');
+
+
 var msysIntervarium;
 var loaded = false;
 
@@ -83,7 +87,8 @@ function msysInitInventarium() {
 				'next': ['click', '.inventarium-slider-nav-right', 'next'],
 				'prev': ['click', '.inventarium-slider-nav-left', 'prev'],
 				'finish': ['click', '.finish_button.finished.-active', 'finish'],
-				'cancel': ['click', '.finish_button.finished.-activeRed', 'cancel'],
+				'cancel': ['click', '.finish_button.cancel.-activeRed', 'cancel'],
+				'keyboard': ['click', '.finish_button.sendmail.-inactive', 'keyboard'],
 				'send_image': ['click', '.finish_button.sendmail.-active', 'send_image'],
 				'restart': ['click', '.heraldika-restart', 'restart'],
 			},
@@ -107,11 +112,11 @@ function msysInitInventarium() {
 			init_game: function () {
 				var $container = $('body');
 				var $config = $('#inventarium-config');
-				
+
 				if ($container.length == 0 || $config.length == 0) {
 					return;
 				}
-				
+
 				this.config = JSON.parse($config.html());
 				this.$container = $container;
 
@@ -119,7 +124,7 @@ function msysInitInventarium() {
 				// this.$container.append($text_field);
 				this.$text_field = $text_field;
 				// console.log(this.$text_field);
-				
+
 				this.init_finish_buttons();
 				this.init_keyboard_fields();
 			},
@@ -128,10 +133,10 @@ function msysInitInventarium() {
 				$finish_buttons = $(".get_list_buttons");
 				$finish_buttons.children()[0].innerHTML = this.config.texts.keszvagyok + $finish_buttons.children()[0].innerHTML;
 				// var $finish_buttons = $(
-				// 	'<div class="finish_buttons -active">' +
-				// 	'<div class="finish_button finished -active">' + this.config.texts.keszvagyok + ' <span class="circle"></span></div>' +
-				// 	// '<div class="finish_button sendmail">' + this.config.texts.elkuldom + ' <span class="circle"></span></div>' +
-				// 	'</div>'
+				//   '<div class="finish_buttons -active">' +
+				//   '<div class="finish_button finished -active">' + this.config.texts.keszvagyok + ' <span class="circle"></span></div>' +
+				//   // '<div class="finish_button sendmail">' + this.config.texts.elkuldom + ' <span class="circle"></span></div>' +
+				//   '</div>'
 				// );
 
 				var $email_field = $(
@@ -141,10 +146,12 @@ function msysInitInventarium() {
 				);
 
 				// this.$container.append($finish_buttons);
+				var kbContainer = document.getElementsByClassName("ui-keyboard")[0];
+				console.log(kbContainer);
 				this.$container.append($email_field);
 				this.$email_field = $email_field.find('input');
 			},
-			
+
 			finish: function (e) {
 				// console.log(this.$text_field);
 				// var mkb = this.$text_field.getkeyboard();
@@ -153,21 +160,21 @@ function msysInitInventarium() {
 				document.getElementById("inventariumList").classList.remove("hiddenList");
 
 				var $butsEl = $('.get_list_buttons'); // document.getElementsByClassName("get_list_buttons")[0]
-				$butsEl.empty();
 				var texts = msysIntervarium.TextSlider.config.texts;
 
 				var $finish_buttons = $(
-					'<div class="finish_button finished -activeRed">' + texts.megse + ' <span class="circle"></span></div>' +
-					'<div class="finish_button sendmail -active">' + texts.elkuldom + ' <span class="circle"></span></div>'
+					'<div class="finish_button cancel -activeRed">' + texts.megse + ' <span class="circle"></span></div>' +
+					'<div class="finish_button sendmail -inactive">' + texts.elkuldom + ' <span class="circle"></span></div>'
 				);
-
-				$butsEl.append($finish_buttons);
+				
+				setTimeout(() => {
+					$butsEl.empty();
+					$butsEl.append($finish_buttons);
+				}, 1250);
 
 				ifr?.postMessage("start");
 				document.getElementById("gameFrameContainer").classList.add("small");
-				var $email_container = msysIntervarium.TextSlider.$email_field.closest('.email-field-container');
-				var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();
-				keyboard.options.alwaysOpen = true;
+
 				// keyboard.reveal();
 				// $email_container.addClass('-show');
 
@@ -177,6 +184,12 @@ function msysInitInventarium() {
 			},
 
 			cancel: function (e) {
+				var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();
+				var $email_container = msysIntervarium.TextSlider.$email_field.closest('.email-field-container');
+
+				keyboard.options.alwaysOpen = false;
+				keyboard.close();
+				$email_container.removeClass('-show');
 				var $butsEl = $('.get_list_buttons');
 				$butsEl.empty();
 				var texts = msysIntervarium.TextSlider.config.texts;
@@ -191,7 +204,28 @@ function msysInitInventarium() {
 
 			},
 
-			send_image: function (e) {
+			keyboard: function (e) {
+				document.getElementsByClassName('sendmail')[0].classList.remove("-inactive");
+				document.getElementsByClassName('sendmail')[0].classList.add("-active");
+				screenshot().then(async (img) => {
+					let result = await jimp.read(img).then(lenna => lenna);
+					result.crop(40, 220, 1840, 840).write('hali.jpg');
+					console.log(result);
+
+					var $email_container = msysIntervarium.TextSlider.$email_field.closest('.email-field-container');
+					var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();
+					keyboard.options.alwaysOpen = true;
+					keyboard.reveal();
+					$email_container.addClass('-show');
+					keyboard.$keyboard.addClass('email-kb');
+				}).catch((err) => {
+					// ...
+				})
+
+			},
+
+			send_image: async function (e) {
+
 				var self = this;
 				var $email_container = msysIntervarium.TextSlider.$email_field.closest('.email-field-container');
 				var _emails = msysIntervarium.TextSlider.$email_field.val();
@@ -219,27 +253,28 @@ function msysInitInventarium() {
 					$email_container.append('<p class="email-error-message">' + msysIntervarium.TextSlider.config.texts.email_nomail + '</p>');
 				}
 				else {
-					var callback = function (png_base64) {
-						var $email_container = self.$email_field.closest('.email-field-container');
-						var keyboard = self.$email_field.getkeyboard();
+					var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();
 
-						var emails_string = emails.join(',');
-						app.sendMail(emails_string, png_base64.split(',')[1]);
+					var emails_string = emails.join(',');
+					const baseJPG = await jimp.read('Screencapture_test_01.jpg').then(image => image).then(image => image.getBase64Async(jimp.AUTO));
+					app.sendMail(emails_string, baseJPG.split(',')[1]);
 
-						self.$container.hide();
-						$('.email-sent-screen').show();
-						$('.email-success').show();
-						//$('.email-failure').show();
+					const $gameContent = $("#gameContent");
+					console.log($gameContent);
+					$gameContent.hide();
+					$('.email-sent-screen').show();
+					$('.email-success').show();
+					//$('.email-failure').show();
 
-						$('.email-sent-screen .image-holder').css({
-							'background-image': 'url(' + png_base64 + ')',
-						});
+					$('.email-sent-screen .image-holder').css({
+						'background-image': 'url("hali.jpg")',
+					});
 
-						keyboard.options.alwaysOpen = false;
-						keyboard.close();
-						$email_container.removeClass('-show');
-					};
-					this.render_image(callback);
+					keyboard.options.alwaysOpen = false;
+					keyboard.close();
+					$email_container.removeClass('-show');
+
+					// this.render_image(callback);
 				}
 			},
 
@@ -344,7 +379,7 @@ function msysInitInventarium() {
 			},
 
 			restart: function (e) {
-				app.setPage('gameCastle');
+				app.setPage('gameChooseRoom');
 			},
 
 
