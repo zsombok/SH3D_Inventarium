@@ -260,8 +260,9 @@ function msysInitInventarium() {
 					app.sendMail(emails_string, baseJPG.split(',')[1]);
 
 					const $gameContent = $("#gameContent");
-					console.log($gameContent);
 					$gameContent.hide();
+					const $buttons = $(".get_list_buttons");
+					$buttons.hide();
 					$('.email-sent-screen').show();
 					$('.email-success').show();
 					//$('.email-failure').show();
