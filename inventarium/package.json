@@ -18,5 +18,6 @@
     "imagesloaded": "^4.1.4",
     "jimp": "^0.16.1",
     "screenshot-desktop": "^1.12.7"
-  }
+  },
+  "keywords": []
 }

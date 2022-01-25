@@ -105,7 +105,7 @@ class Application {
         const liItem = document.createElement("div");
         liItem.classList.add("listItem");
         const imgEl = document.createElement("img");
-        imgEl.src = "../" + el.img;
+        imgEl.src = el.img;
         liItem.append(imgEl);
 
         const infos = document.createElement("div");

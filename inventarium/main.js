@@ -9,10 +9,9 @@ function createWindow () {
       contextIsolation: false,
       nativeWindowOpen: true
     },
-    // autoHideMenuBar: true,
   });
 
-  mainWindow.setPosition(-1000,1000);
+  // mainWindow.setPosition(-1000,1000);
   mainWindow.setFullScreen(true);
   mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile('index.html');

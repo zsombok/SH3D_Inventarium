@@ -403,12 +403,12 @@
 
 .rc-pic-1 {
   filter: brightness(1.2) saturate(1.2);
-  background-image: url("../../lib/resources/_Urfiak_haza.png");
+  background-image: url("_Urfiak_haza.png");
 }
 
 .rc-pic-2 {
   filter: saturate(1.4);
-  background-image: url("../../lib/resources/_Sajat_szoba.png");
+  background-image: url("_Sajat_szoba.png");
 }
 
 .email-sent-screen {
