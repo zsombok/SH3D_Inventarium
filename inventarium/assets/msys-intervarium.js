@@ -1,7 +1,6 @@
 const jimp = require('jimp');
 const screenshot = require('screenshot-desktop');
 
-
 var msysIntervarium;
 var loaded = false;
 
@@ -208,9 +207,10 @@ function msysInitInventarium() {
 				document.getElementsByClassName('sendmail')[0].classList.remove("-inactive");
 				document.getElementsByClassName('sendmail')[0].classList.add("-active");
 				screenshot().then(async (img) => {
-					let result = await jimp.read(img).then(lenna => lenna);
-					result.crop(40, 220, 1840, 840).write('hali.jpg');
-					console.log(result);
+					// let result = await jimp.read(img).then(lenna => lenna);
+					// result.crop(40, 220, 1840, 840).write('hali.jpg');
+          ipcRenderer.send('capture');
+
 
 					var $email_container = msysIntervarium.TextSlider.$email_field.closest('.email-field-container');
 					var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();

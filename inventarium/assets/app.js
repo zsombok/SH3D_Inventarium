@@ -1,5 +1,6 @@
 const fs = require('fs');
 const mail = require('@sendgrid/mail');
+const {ipcRenderer} = require('electron');
 let ifr;
 
 // temp key for Borsi
@@ -15,6 +16,7 @@ class Application {
   setGame(game) {
     if (game == 'castle') {
       this.game = 'Urfiak_haza';
+      ipcRenderer.send('preload');
     }
     if (game == 'room') {
       this.game = 'Sajat_szoba';

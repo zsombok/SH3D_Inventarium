@@ -1475,11 +1475,11 @@
         })
       : new SweetHome3DJSApplication();
 
-    Locale.setDefault(window.parent.app.language);
+    Locale.setDefault('hu');
 
-    var homeName = useServer ? "HomeTest" : "lib/resources/models/" + window.parent.app.game + ".sh3d";
+    var homeName = useServer ? "HomeTest" : "lib/resources/models/Sajat_szoba.sh3d";
 
-    // Read and display test file
+    // Read and display test file 
     // TODO Should be performed in HomeController.open
     application.getHomeRecorder().readHome(homeName,
       {
