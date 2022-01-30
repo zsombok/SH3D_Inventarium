@@ -268,7 +268,7 @@ function msysInitInventarium() {
 					//$('.email-failure').show();
 
 					$('.email-sent-screen .image-holder').css({
-						'background-image': 'url("hali.jpg")',
+						'background-image': 'url("hali.png")',
 					});
 
 					keyboard.options.alwaysOpen = false;
