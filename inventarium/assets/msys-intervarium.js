@@ -1,5 +1,5 @@
 const jimp = require('jimp');
-const screenshot = require('screenshot-desktop');
+// const screenshot = require('screenshot-desktop');
 
 var msysIntervarium;
 var loaded = false;
@@ -206,7 +206,7 @@ function msysInitInventarium() {
 			keyboard: function (e) {
 				document.getElementsByClassName('sendmail')[0].classList.remove("-inactive");
 				document.getElementsByClassName('sendmail')[0].classList.add("-active");
-				screenshot().then(async (img) => {
+				// screenshot().then(async (img) => {
 					// let result = await jimp.read(img).then(lenna => lenna);
 					// result.crop(40, 220, 1840, 840).write('hali.jpg');
           ipcRenderer.send('capture');
@@ -218,9 +218,9 @@ function msysInitInventarium() {
 					keyboard.reveal();
 					$email_container.addClass('-show');
 					keyboard.$keyboard.addClass('email-kb');
-				}).catch((err) => {
-					// ...
-				})
+				// }).catch((err) => {
+				// 	// ...
+				// })
 
 			},
 
@@ -256,8 +256,8 @@ function msysInitInventarium() {
 					var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();
 
 					var emails_string = emails.join(',');
-					const baseJPG = await jimp.read('Screencapture_test_01.jpg').then(image => image).then(image => image.getBase64Async(jimp.AUTO));
-					app.sendMail(emails_string, baseJPG.split(',')[1]);
+					const basePNG = await jimp.read('hali.png').then(image => image).then(image => image.getBase64Async(jimp.AUTO));
+					app.sendMail(emails_string, basePNG.split(',')[1]);
 
 					const $gameContent = $("#gameContent");
 					$gameContent.hide();

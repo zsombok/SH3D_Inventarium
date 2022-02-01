@@ -1519,8 +1519,6 @@
         const img = array[i].icon.url;
         const quantity = array.filter(x => x.name == name).length;
         furnitureArray[counter++] = { name, desc, info, img, quantity };
-        console.log(Number.parseFloat(array[i].price));
-        console.log(quantity);
         total += Number.parseFloat(array[i].price) * quantity;
       }
       return {furnitureArray, total};

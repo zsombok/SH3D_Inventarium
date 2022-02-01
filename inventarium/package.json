@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.6.0",
+    "express": "^4.17.2",
     "glob": "^7.1.7",
     "imagesloaded": "^4.1.4",
-    "jimp": "^0.16.1",
-    "screenshot-desktop": "^1.12.7"
+    "jimp": "^0.16.1"
   },
   "keywords": []
 }

@@ -1,5 +1,19 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const fs = require('fs');
+// const path = require('path');
+// const express = require('express');
+// const server = express();
+// const port = 3000;
+
+// server.use('/', express.static(path.join(__dirname, '/')))
+// // server.get('/', (req, res) => {
+// //   res.send('inventarium.html')
+// // })
+
+// server.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`)
+// })
+
 let mainWindow;
 let subWindow;
 
@@ -16,11 +30,11 @@ function createWindow () {
     backgroundColor: '#000000',
   });
 
-  mainWindow.setPosition(3000,1000);
+  // mainWindow.setPosition(-1000,1000);
   mainWindow.setFullScreen(true);
   mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile('index.html');
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 }
 
 function createSubWindow () {
@@ -38,7 +52,7 @@ function createSubWindow () {
     backgroundColor: '#000000',
   });
   
-  subWindow.setPosition(3000,1000);
+  // subWindow.setPosition(1000,1000);
   subWindow.loadFile('inventarium_sajat.html');
 
 }

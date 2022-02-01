@@ -72,13 +72,8 @@ class Application {
       }
     }
 
-
-
     ifr = document.getElementById("gameFrame")?.contentWindow;
-    // window.addEventListener("click", e => {
-    //   // console.log(e);
-    //   ifr?.postMessage("hello");
-    // })
+
     msysInitInventarium();
 
     let invList = [];
@@ -93,7 +88,6 @@ class Application {
 
     const generateTotalText = function () {
       const texts = msysIntervarium.TextSlider.config.texts;
-      console.log(invList.total);
       const whole = Math.floor(invList.total);
       const decimals = Math.round((invList.total - whole) * 100);
       return texts.total + " " + whole + " " + texts.forint + " " + decimals + " " + texts.denar;
