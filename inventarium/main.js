@@ -66,9 +66,9 @@ app.on('window-all-closed', function (e) {
   app.quit();
 });
 
-ipcMain.on('preload', (e, a) => {
-  console.log(e);
-});
+// ipcMain.on('preload', (e, a) => {
+//   console.log(e);
+// });
 
 ipcMain.on('capture', (e) => {
   mainWindow.capturePage({x: 40, y: 220, width: 1840, height: 840}).then(img => {

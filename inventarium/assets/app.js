@@ -16,7 +16,6 @@ class Application {
   setGame(game) {
     if (game == 'castle') {
       this.game = 'Urfiak_haza';
-      ipcRenderer.send('preload');
     }
     if (game == 'room') {
       this.game = 'Sajat_szoba';
@@ -30,6 +29,10 @@ class Application {
       this.setHeader('cc');
       this.setPage('main');
     }
+  }
+
+  deleteSelection() {
+    document.querySelector("#gameFrame").contentWindow.application.homeControllers[0].furnitureController.deleteSelection();
   }
 
   setHeader(name) {

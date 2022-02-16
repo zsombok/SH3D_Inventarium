@@ -48,7 +48,7 @@ function UserPreferences() {
   /** @type {LengthUnit} */
   this.unit = null;
   this.furnitureCatalogViewedInTree = true;
-  this.aerialViewCenteredOnSelectionEnabled = false;
+  this.aerialViewCenteredOnSelectionEnabled = true;
   this.observerCameraSelectedAtChange = true;
   this.navigationPanelVisible = true;
   this.magnetismEnabled = true;
