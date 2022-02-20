@@ -1,10 +1,8 @@
 const fs = require('fs');
-const mail = require('@sendgrid/mail');
-const {ipcRenderer} = require('electron');
+// const mail = require('@sendgrid/mail');
+const { ipcRenderer } = require('electron');
+const nodemailer = require('nodemailer');
 let ifr;
-
-// temp key for Borsi
-mail.setApiKey('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');
 
 class Application {
 
@@ -135,24 +133,42 @@ class Application {
     }
   }
 
-  sendMail(to, attachment) {
+  sendMail(emails) {
     this.closeKbd();
 
-    const msg = {
-      to: to,
-      from: 'info@littlebit.hu',
-      subject: { 'sk': 'Inventár - Borsi', 'hu': 'Inventáriumok - Borsi', 'en': 'Inventories - Borsi' }[this.language],
-      html: '[attachment]',
-      attachments: [
-        {
-          filename: 'attachment.jpg',
-          type: 'image/jpeg',
-          content: attachment,
-          disposition: 'attachment'
-        }
-      ]
+    console.log(emails);
+
+    async function main() {
+      // Generate test SMTP service account from ethereal.email
+      // Only needed if you don't have a real mail account for testing
+      let testAccount = await nodemailer.createTestAccount();
+
+      // create reusable transporter object using the default SMTP transport
+      let transporter = nodemailer.createTransport({
+        host: "mail.silicium.eu",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+          user: "muzeum@rakoczino.eu",
+          pass: "b0leeuvs7aop",
+        },
+      });
+
+      // send mail with defined transport object
+      let info = await transporter.sendMail({
+        from: { 'sk': 'Inventár - Borsi', 'hu': 'Inventáriumok - Borsi', 'en': 'Inventories - Borsi' }[app.language] + "<muzeum@rakoczino.eu>", // sender address
+        to: "zsombokd@gmail.com", // list of receivers
+        subject: { 'sk': 'Inventár - Borsi', 'hu': 'Inventáriumok - Borsi', 'en': 'Inventories - Borsi' }[app.language], // Subject line
+        text: "",
+        attachments: [{
+          filename: `${emails.split('@')[0]}-inventarium.png`,
+          path: `${__dirname}/saved_images/${app.findLastSavedImage()}`,
+        }]
+      });
     }
-    mail.send(msg);
+
+    main().catch(console.error);
+
   }
 
   closeKbd() {
@@ -180,5 +196,18 @@ class Application {
     try {
       $('.email-field-container').removeClass('-show');
     } catch { }
+  }
+
+  findLastSavedImage() {
+    let img = 0;
+
+    fs.readdirSync(`${__dirname}/saved_images/`).forEach(file => {
+      let current = file.split(".")[0];
+      if (Number.parseInt(current) > img) {
+        img = current
+      }
+    });
+
+    return img.toString() + ".png";
   }
 }

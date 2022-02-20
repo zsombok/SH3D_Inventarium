@@ -146,7 +146,6 @@ function msysInitInventarium() {
 
 				// this.$container.append($finish_buttons);
 				var kbContainer = document.getElementsByClassName("ui-keyboard")[0];
-				console.log(kbContainer);
 				this.$container.append($email_field);
 				this.$email_field = $email_field.find('input');
 			},
@@ -256,8 +255,8 @@ function msysInitInventarium() {
 					var keyboard = msysIntervarium.TextSlider.$email_field.getkeyboard();
 
 					var emails_string = emails.join(',');
-					const basePNG = await jimp.read('hali.png').then(image => image).then(image => image.getBase64Async(jimp.AUTO));
-					app.sendMail(emails_string, basePNG.split(',')[1]);
+					// const basePNG = await jimp.read('hali.png').then(image => image).then(image => image.getBase64Async(jimp.AUTO));
+					app.sendMail(emails_string);
 
 					const $gameContent = $("#gameContent");
 					$gameContent.hide();
@@ -268,7 +267,7 @@ function msysInitInventarium() {
 					//$('.email-failure').show();
 
 					$('.email-sent-screen .image-holder').css({
-						'background-image': 'url("hali.png")',
+						'background-image': `url(../inventarium/saved_images/${app.findLastSavedImage()})`,
 					});
 
 					keyboard.options.alwaysOpen = false;
