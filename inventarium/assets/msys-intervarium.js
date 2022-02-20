@@ -258,6 +258,8 @@ function msysInitInventarium() {
 					// const basePNG = await jimp.read('hali.png').then(image => image).then(image => image.getBase64Async(jimp.AUTO));
 					app.sendMail(emails_string);
 
+					const $contentText = $(".content-text");
+					$contentText.hide();
 					const $gameContent = $("#gameContent");
 					$gameContent.hide();
 					const $buttons = $(".get_list_buttons");
