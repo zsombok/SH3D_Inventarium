@@ -29,10 +29,6 @@ class Application {
     }
   }
 
-  deleteSelection() {
-    document.querySelector("#gameFrame").contentWindow.application.homeControllers[0].furnitureController.deleteSelection();
-  }
-
   setHeader(name) {
     if (name == 'cc') {
       let html = fs.readFileSync(__dirname + '/headers/cc.html').toString();

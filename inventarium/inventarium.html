@@ -62,11 +62,10 @@
   <script type="text/javascript" src="src/SweetHome3DJSApplication.js"></script>
   <link rel="stylesheet" type="text/css" href="lib/sweethome3djs.css">
   <style type="text/css">
-
     * {
       outline: none;
     }
-    
+
     html,
     body {
       overflow-x: hidden;
@@ -409,7 +408,11 @@
 
     <div id="catalog-furniture-pane">
       <div id="furniture-catalog">
-        <div id="furniture-catalog-list" class="furniture-catalog-list"></div>
+        <div id="furniture-catalog-list" class="furniture-catalog-list">
+          <div style="width: 100%; position: absolute; bottom: 12px; display: flex; justify-content: center;">
+            <span id="delete-btn" style="padding: 12px; color: white; background-color: rgb(240,60,60); border-radius: 8px; font-weight: bold; cursor: pointer" onclick="application.homeControllers[0].furnitureController.deleteSelection()"></span>
+          </div>
+        </div>
       </div>
       <div id="catalog-furniture-splitter" class="pane-splitter"></div>
       <div id="furniture-view"></div>
@@ -1521,8 +1524,10 @@
         furnitureArray[counter++] = { name, desc, info, img, quantity };
         total += Number.parseFloat(array[i].price) * quantity;
       }
-      return {furnitureArray, total};
+      return { furnitureArray, total };
     };
+
+    document.querySelector('#delete-btn').textContent = { "hu": "Kijelölés törlése", "sk": "Odstrániť výber", "en": "Delete selection" }[window.parent.app.language]
   </script>
 
 </body>
