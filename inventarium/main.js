@@ -34,7 +34,7 @@ function createWindow () {
   mainWindow.setFullScreen(true);
   mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile('index.html');
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 }
 
 function createSubWindow () {
