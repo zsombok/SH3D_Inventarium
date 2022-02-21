@@ -151,7 +151,7 @@ class Application {
       // send mail with defined transport object
       let info = await transporter.sendMail({
         from: { 'sk': 'Inventár - Borsi', 'hu': 'Inventáriumok - Borsi', 'en': 'Inventories - Borsi' }[app.language] + "<muzeum@rakoczino.eu>", // sender address
-        to: "zsombokd@gmail.com", // list of receivers
+        to: emails, // list of receivers
         subject: { 'sk': 'Inventár - Borsi', 'hu': 'Inventáriumok - Borsi', 'en': 'Inventories - Borsi' }[app.language], // Subject line
         text: "",
         attachments: [{
