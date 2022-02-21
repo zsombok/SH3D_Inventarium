@@ -72,6 +72,6 @@ app.on('window-all-closed', function (e) {
 
 ipcMain.on('capture', (e) => {
   mainWindow.capturePage({x: 40, y: 220, width: 1840, height: 840}).then(img => {
-    fs.writeFileSync(`${__dirname}\\saved_images\\${Date.now()}.png`, img.toPNG(), e => { if (e) throw err})
+    fs.writeFileSync(`${__dirname}/saved_images/${Date.now()}.png`, img.toPNG(), e => { if (e) throw err})
   })
 })
