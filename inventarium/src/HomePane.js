@@ -51,7 +51,7 @@ function HomePane(containerId, home, preferences, controller) {
   this.addUserPreferencesListener(preferences);
   this.addPlanControllerListener(controller.getPlanController());
   this.createToolBar(home, preferences);
-  this.createPopupMenus(home, preferences);
+  // this.createPopupMenus(home, preferences);
   this.initSplitters();
   this.addOrientationChangeListener();
   

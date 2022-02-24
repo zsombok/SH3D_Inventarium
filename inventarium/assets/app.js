@@ -1,5 +1,4 @@
 const fs = require('fs');
-// const mail = require('@sendgrid/mail');
 const { ipcRenderer } = require('electron');
 const nodemailer = require('nodemailer');
 let ifr;

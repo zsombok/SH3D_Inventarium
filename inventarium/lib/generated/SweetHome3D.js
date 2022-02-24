@@ -14873,7 +14873,7 @@ var FurnitureController = /** @class */ (function () {
      */
     FurnitureController.prototype.modifySelectedFurniture = function () {
         if (!(Home.getFurnitureSubList(this.home.getSelectedItems()).length == 0)) {
-            new HomeFurnitureController(this.home, this.preferences, this.viewFactory, this.contentManager, this.undoSupport).displayView(this.getView());
+            // new HomeFurnitureController(this.home, this.preferences, this.viewFactory, this.contentManager, this.undoSupport).displayView(this.getView());
         }
     };
     /**
